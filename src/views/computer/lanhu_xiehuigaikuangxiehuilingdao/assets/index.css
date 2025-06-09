@@ -12,6 +12,25 @@
   height: 190px;
 }
 
+.image-contianer_1 {
+  display: flex;
+  flex-direction: column; 
+  align-items: center; 
+  justify-content: center; 
+}
+
+.image_1 {
+  width: 139px;
+  height: 139px;
+  margin: 15px auto 0 auto;
+}
+
+.image_20 {
+  width: 82px;
+  height: 24px;
+  margin: 1px auto 0 auto;
+}
+
 .section_1 {
   border-radius: 4px;
   height: 46px;
@@ -229,12 +248,6 @@
   white-space: nowrap;
   line-height: 26px;
   margin: 7px 0 0 14px;
-}
-
-.image_1 {
-  width: 139px;
-  height: 139px;
-  margin: 26px 519px 0 40px;
 }
 
 .group_2 {

@@ -1,6 +1,19 @@
 <template>
   <div class="page flex-col">
     <div class="box_1 flex-row">
+      <div class="image-contianer_1">
+      <img
+        class="image_1"
+        referrerpolicy="no-referrer"
+        src="./assets/img/MasterDDSSlicePNG9e4f0afb7009ff9f61fbd480c98d69ef.png"
+      />
+
+      <img
+        class="image_10"
+        referrerpolicy="no-referrer"
+        src="./assets/img/MasterDDSSlicePNGdca3da43733296a7c96e5d88d14cf365.png"
+      />
+    </div>
       <div class="block_1 flex-col">
         <a class="text-wrapper_1 flex-col" :href="'/computer/shouye'" target="_blank"><span class="text_1">首页</span></a>
       </div>
@@ -25,11 +38,6 @@
       <div class="block_3 flex-col">
         <a class="text-wrapper_6 flex-col" :href="'/computer/huiyuanzhijiadanweihuiyuan'" target="_blank"><span class="text_8">会员之家</span></a>
       </div>
-      <img
-        class="image_1"
-        referrerpolicy="no-referrer"
-        src="./assets/img/MasterDDSSlicePNG9e4f0afb7009ff9f61fbd480c98d69ef.png"
-      />
     </div>
     <div class="box_6 flex-col">
       <div class="section_2 flex-col justify-end">

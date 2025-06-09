@@ -13,6 +13,25 @@
   overflow: hidden;
 }
 
+.image-contianer_1 {
+  display: flex;
+  flex-direction: column; 
+  align-items: center; 
+  justify-content: center; 
+}
+
+.image_1 {
+  width: 139px;
+  height: 139px;
+  margin: 15px auto 0 auto;
+}
+
+.image_6 {
+  width: 82px;
+  height: 24px;
+  margin: 1px auto 0 auto;
+}
+
 .block_1 {
   background-color: rgba(255, 251, 239, 1);
   width: 1920px;
@@ -247,12 +266,6 @@
   white-space: nowrap;
   line-height: 26px;
   margin: 7px 0 0 14px;
-}
-
-.image_1 {
-  width: 139px;
-  height: 139px;
-  margin: 26px 519px 0 40px;
 }
 
 .block_2 {
