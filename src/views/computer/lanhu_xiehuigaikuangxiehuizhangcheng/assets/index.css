@@ -10,7 +10,7 @@
   width: 100%;
   max-width: 100%;           
   margin: 0 auto;        
-  overflow: hidden;
+  overflow: visible;
 }
 
 .image-contianer_1 {
@@ -365,22 +365,23 @@
   flex-direction: row;
   justify-content: space-between;
   width: 1600px;
-  height: 2350px;
+  height:auto;
   margin: 24px 0 0 160px;
+  align-items: stretch;
 }
 
 .section_5 {
   background-color: rgba(248, 246, 239, 1);
-  height: 2350px;
+  height: auto;
+  box-sizing: border-box;
   border: 1px solid rgba(210, 197, 151, 1);
   width: 800px;
 }
 
 .text-wrapper_8 {
   width: 750px;
-  height: 2220px;
   overflow-wrap: break-word;
-  font-size: 14;
+  font-size: 14px;
   font-family: Source Han Serif CN-Bold;
   text-align: justify;
   line-height: 30px;
@@ -485,14 +486,14 @@
 
 .section_6 {
   background-color: rgba(248, 246, 239, 1);
-  height: 2350px;
+  height: auto;
+  box-sizing: border-box;
   border: 1px solid rgba(210, 197, 151, 1);
   width: 800px;
 }
 
 .text-wrapper_9 {
   width: 750px;
-  height: 2280px;
   overflow-wrap: break-word;
   font-size: 0;
   font-family: Source Han Serif CN-Regular;
@@ -620,7 +621,8 @@
   background-color: rgba(255, 251, 239, 1);
   width: 1120px;
   height: 315px;
-  border: 1px solid rgba(204, 204, 204, 1);
+  border-right: 1px solid rgba(204, 204, 204, 1);
+  border-bottom: 1px solid rgba(204, 204, 204, 1);
 }
 
 .image-wrapper{
@@ -696,7 +698,7 @@
 .box_8 {
   width: 332px;
   height: 56px;
-  margin: 40px 0 0 40px;
+  margin: 20px 0 0 40px;
 }
 
 .text-group_1 {

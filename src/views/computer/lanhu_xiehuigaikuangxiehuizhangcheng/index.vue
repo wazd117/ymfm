@@ -352,7 +352,8 @@
           </div>
         </div>
       </div>
-      <div class="box_7 flex-row justify-between">
+      <div class="box_7 flex-col justify-between">
+        <div class="text-wrapper_12 flex-row">
         <div class="block_3 flex-col">
           <span class="text_14">友情链接</span>
           <div class="image-wrapper">
@@ -400,11 +401,12 @@
             </div>
             <router-link class="text-wrapper_10 flex-col" to="lianxiwomen" target="_blank"><span class="text_18">联系我们&nbsp;→</span></router-link>
           </div>
+         </div>
+        </div>
+        <div class="text-wrapper_11 flex-col">
+          <span class="text_19">版权所有：Copyright&nbsp;©&nbsp;云南省发明协会&nbsp;All&nbsp;rights&nbsp;reserved.</span>
         </div>
       </div>
-    </div>
-    <div class="text-wrapper_11 flex-col">
-      <span class="text_19">版权所有：Copyright&nbsp;©&nbsp;云南省发明协会&nbsp;All&nbsp;rights&nbsp;reserved.</span>
     </div>
   </div>
 </div>
