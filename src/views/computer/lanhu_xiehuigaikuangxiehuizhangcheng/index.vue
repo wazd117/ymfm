@@ -1,6 +1,9 @@
 <template>
   <div class="wrapper">
   <div class="page flex-col">
+    <div class="top-banner flex-col">
+    <span class="text_9">云南省发明协会</span>
+    </div>
     <div class="block_1 flex-row">
       <img class="thumbnail_1" src="./assets/img/MasterDDSSlicePNG5226391ac2d1006ca17818153b41a789.png" />
       <div class="image-contianer_1">
