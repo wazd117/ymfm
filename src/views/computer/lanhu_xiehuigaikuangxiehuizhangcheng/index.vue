@@ -2,10 +2,41 @@
   <div class="wrapper">
   <div class="page flex-col">
     <div class="top-banner flex-col">
-    <span class="text_9">云南省发明协会</span>
-    </div>
+      <span class="text_21">云南省发明协会</span>
+     </div>
+      <div class="text-container_1 flex-col">
+        <div class="text-container_2 flex-row justify-between">
+          <span class="text_20">Yunnan&nbsp;Province&nbsp;Association&nbsp;of&nbsp;Inventors</span>
+          <img class="thumbnail_1" src="./assets/img/MasterDDSSlicePNG5226391ac2d1006ca17818153b41a789.png" />
+        </div>
+        <div class="text-wrapper_13 flex-row"><span class="text_22">云南省发明协会</span></div>
+        <div class="image-wrapper_1 flex-col">
+          <img
+            class="label_1"
+            referrerpolicy="no-referrer"
+            src="./assets/img/MasterDDSSlicePNG8de44bc4b86c0f0d99c3e2face903706.png"
+          />
+          <img
+            class="label_2"
+            referrerpolicy="no-referrer"
+            src="./assets/img/MasterDDSSlicePNGdca3da43733296a7c96e5d88d14cf365.png"
+          /> 
+        </div>
+      </div>
+      <div class="box_10 flex-col justify-end">
+        <span class="paragraph_20">
+          推动发明
+          <br />
+          保护创新
+        </span>
+        <div class="text-wrapper_14 flex-row">
+          <router-link class="text_23" to="xiehuigaikuangxiehuijianjie">协会简介</router-link>
+          <span class="text_24">协会章程</span>
+          <router-link class="text_25" to="xiehuigaikuangxiehuilingdao">协会领导</router-link>
+          <router-link class="text_26" to="xiehuigaikuangxiehuiyeji">协会业绩</router-link>
+        </div>
+      </div>
     <div class="block_1 flex-row">
-      <img class="thumbnail_1" src="./assets/img/MasterDDSSlicePNG5226391ac2d1006ca17818153b41a789.png" />
       <div class="image-contianer_1">
       <img
         class="image_1"
@@ -354,6 +385,46 @@
             </span>
           </div>
         </div>
+        <div class="section_7 flex-col">
+          <span class="text_27">友情链接</span>
+          <img
+            class="image_7"
+            referrerpolicy="no-referrer"
+            src="./assets/img/famingxiehuilogo.png"
+            />
+          <img
+            class="image_8"
+            referrerpolicy="no-referrer"
+            src="./assets/img/shengwuyiyaologo.png"
+            />
+          <img
+            class="image_9"
+            referrerpolicy="no-referrer"
+            src="./assets/img/ynuzhishichanquanlogo.png"
+            />
+        </div>
+    <div class="section_8 flex-col">
+      <div class="text-group_1 flex-col justify-between">
+        <span class="text_28">云南省发明协会</span>
+        <span class="text_29">地址：云南省昆明市五华区学府路海伦先生&nbsp;1&nbsp;栋&nbsp;11&nbsp;楼</span>
+      </div>
+      <div class="text-group_2 flex-col justify-between">
+        <span class="text_30">联系方式</span>
+        <span class="paragraph_19">
+          副秘书长—刘志强：15368258967
+          <br />
+          副秘书长—张毓洀：18669000423
+          <br />
+          电话总机：0871-68588876
+          <br />
+          邮编：655000
+        </span>
+      </div>
+      <a class="text-wrapper_15 flex-col" :href="'/mobile/lianxiwomen'"><span class="text_31">联系我们&nbsp;→</span></a>
+      <div class="text-wrapper_16 flex-col">
+      <span class="text_32">版权所有：Copyright&nbsp;©&nbsp;云南省发明协会&nbsp;All&nbsp;rights&nbsp;reserved.</span>
+    </div>
+    </div>
       </div>
       <div class="box_7 flex-col justify-between">
         <div class="text-wrapper_12 flex-row">

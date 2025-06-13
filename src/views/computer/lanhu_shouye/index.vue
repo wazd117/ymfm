@@ -68,7 +68,7 @@
         <div class="box_3 flex-col"></div>
       </div>
       <div class="box_35 flex-row justify-between">
-        <div class="block_7 flex-col">
+        <a class="block_7 flex-col" :href="'http://www.ynfm.com.cn/zh-hans/node/48'" target="_blank">
           <div class="text-wrapper_7 flex-col">
             <span class="paragraph_2">
               通知
@@ -78,11 +78,11 @@
           </div>
           <span class="text_9">2025-02-17</span>
           <span class="text_10">关于举办第&nbsp;20&nbsp;届宋庆龄少年儿童发明奖的通知</span>
-        </div>
+        </a>
         <div class="group_19 flex-col justify-between">
           <div class="section_19 flex-row justify-between">
             <div class="image-text_25 flex-col justify-between">
-              <div class="block_9 flex-col">
+              <a class="block_9 flex-col" href="http://www.ynfm.com.cn/zh-hans/node/44" target="_blank">
                 <div class="text-wrapper_8 flex-col">
                   <span class="paragraph_3">
                     要闻
@@ -90,10 +90,10 @@
                     动态
                   </span>
                 </div>
-              </div>
+              </a>
               <span class="text-group_1">2024-03-16</span>
             </div>
-            <div class="image-text_26 flex-col justify-between">
+            <a class="image-text_26 flex-col justify-between" href="http://www.ynfm.com.cn/zh-hans/node/46" target="_blank">
               <div class="group_1 flex-col">
                 <div class="text-wrapper_9 flex-col">
                   <span class="paragraph_4">
@@ -104,7 +104,7 @@
                 </div>
               </div>
               <span class="text-group_2">2024-03-16</span>
-            </div>
+            </a>
           </div>
           <div class="list_9 flex-row">
             <div class="text-wrapper_34 flex-col justify-between" v-for="(item, index) in loopData0" :key="index">
@@ -134,7 +134,7 @@
               <span class="text_16">
                 2021年9月27-28日，经中央和国家机关工委和中国科协批准同意，中国发明协会第八次全国会员代表大会暨第十五届中...
               </span>
-              <span class="text_17">查看详情→</span>
+              <a class="text_17" href="http://www.ynfm.com.cn/zh-hans/node/22" target="_blank">查看详情→</a>
             </div>
           </div>
         </div>
@@ -154,7 +154,7 @@
               <span class="text_20">
                 2020年7月29日，中国中医科学院名誉院长、天津中医药大学校长张伯礼院士在北京中国科技会堂举行的中国发明家论坛...
               </span>
-              <span class="text_21">查看详情→</span>
+              <a class="text_21" href="http://www.ynfm.com.cn/zh-hans/node/21" target="_blank">查看详情→</a>
             </div>
           </div>
         </div>
@@ -174,7 +174,7 @@
               <span class="text_24">
                 为了进一步贯彻落实党的十九大精神和习近平新时代中国特色社会主义思想，贯彻落实李克强总理对中国发明协会第七次...
               </span>
-              <span class="text_25">查看详情→</span>
+              <a class="text_25" href="http://www.ynfm.com.cn/zh-hans/node/20" target="_blank">查看详情→</a>
             </div>
           </div>
         </div>
