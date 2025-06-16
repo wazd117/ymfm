@@ -1,6 +1,6 @@
 <template>
   <div class="page flex-col">
-    <div class="group_1 flex-row">
+  <div class="group_1 flex-row">
     <div class="image-contianer_1">
       <img
         class="image_1"
@@ -215,5 +215,5 @@ export default {
   methods: {}
 };
 </script>
-<style scoped lang="css" src="./assets/index.css" />
+<style scoped lang="css" src="./assets/index.rem.css" />
 <style scoped lang="css" src="@/assets/common.css" />

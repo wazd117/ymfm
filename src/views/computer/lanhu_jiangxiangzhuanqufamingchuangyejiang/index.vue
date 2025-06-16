@@ -1,6 +1,18 @@
 <template>
   <div class="page flex-col">
     <div class="section_1 flex-row">
+      <div class="image-contianer_1">
+       <img
+         class="image_1"
+         referrerpolicy="no-referrer"
+         src="./assets/img/MasterDDSSlicePNG9e4f0afb7009ff9f61fbd480c98d69ef.png"
+       />
+       <img
+        class="image_20"
+        referrerpolicy="no-referrer"
+        src="./assets/img/MasterDDSSlicePNGdca3da43733296a7c96e5d88d14cf365.png"
+      />
+      </div>
       <div class="box_1 flex-col">
         <a class="text-wrapper_1 flex-col" :href="'/computer/shouye'" target="_blank"><span class="text_1">首页</span></a>
       </div>
@@ -25,11 +37,6 @@
       <div class="box_7 flex-col">
         <a class="text-wrapper_6 flex-col" :href="'/computer/huiyuanzhijiadanweihuiyuan'" target="_blank"><span class="text_8">会员之家</span></a>
       </div>
-      <img
-        class="image_1"
-        referrerpolicy="no-referrer"
-        src="./assets/img/MasterDDSSlicePNG9e4f0afb7009ff9f61fbd480c98d69ef.png"
-      />
     </div>
     <div class="section_2 flex-col">
       <div class="box_8 flex-col justify-end">
@@ -277,7 +284,6 @@
       <div class="box_24 flex-col">
         <span class="text_57">友情链接</span>
         <div class="image-wrapper">
-        
         <a class="zhongguofamingixiehuilink" :href="'https://www.cainet.org.cn/'" target="_blank">
         <img
           class="image_14"
@@ -343,5 +349,5 @@ export default {
   methods: {}
 };
 </script>
-<style scoped lang="css" src="./assets/index.css" />
+<style scoped lang="css" src="./assets/index.rem.css" />
 <style scoped lang="css" src="@/assets/common.css" />
