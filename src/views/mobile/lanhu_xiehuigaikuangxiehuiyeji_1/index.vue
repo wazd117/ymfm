@@ -164,5 +164,5 @@ export default {
   methods: {}
 };
 </script>
-<style scoped lang="css" src="./assets/index.css" />
+<style scoped lang="css" src="./assets/index.rem.css" />
 <style scoped lang="css" src="@/assets/common.css" />
