@@ -1,5 +1,46 @@
 <template>
   <div class="page flex-col">
+
+    <div class="top-banner flex-col">
+      <span class="text_30">云南省发明协会</span>
+    </div>
+
+      <div class="text-container_1 flex-col">
+        <div class="text-container_2 flex-row justify-between align-center">
+          <div class="text-with-image flex-row align-center"></div>
+             <span class="text_31">Yunnan&nbsp;Province&nbsp;Association&nbsp;of&nbsp;Inventors </span>
+          <img class="thumbnail_1" src="./assets/img/MasterDDSSlicePNG5226391ac2d1006ca17818153b41a789.png" />
+        </div>
+        <div class="text-wrapper_13 flex-col"><span class="text_32">云南省发明协会</span>
+          <div class="image-wrapper_1 flex-col">
+          <img
+            class="label_1"
+            referrerpolicy="no-referrer"
+            src="./assets/img/MasterDDSSlicePNG8de44bc4b86c0f0d99c3e2face903706.png"
+          />
+          <img
+            class="label_2"
+            referrerpolicy="no-referrer"
+            src="./assets/img/MasterDDSSlicePNGdca3da43733296a7c96e5d88d14cf365.png"
+          /> 
+        </div>
+      </div>
+    </div>
+
+    <div class="box_14 flex-col justify-end">
+        <span class="paragraph_20">
+          推动发明
+          <br />
+          保护创新
+        </span>
+        <div class="text-wrapper_14 flex-row">
+          <span class="text_33">协会简介</span>
+          <router-link class="text_34" to="xiehuigaikuangxiehuizhangcheng">协会章程</router-link>
+          <router-link class="text_35" to="xiehuigaikuangxiehuilingdao">协会领导</router-link>
+          <router-link class="text_36" to="xiehuigaikuangxiehuiyeji">协会业绩</router-link>
+        </div>
+      </div>
+
     <div class="box_1 flex-row">
       <div class="image-contianer_1">
       <img
@@ -7,7 +48,6 @@
         referrerpolicy="no-referrer"
         src="./assets/img/MasterDDSSlicePNG9e4f0afb7009ff9f61fbd480c98d69ef.png"
       />
-
       <img
         class="image_10"
         referrerpolicy="no-referrer"
@@ -59,10 +99,12 @@
           云南省发明协会在中国发明协会的指导下成立于1986年7月25日，协会的宗旨是：遵守宪法、法律、法规和国家政策，践行社会主义核心价值观，遵守社会道德风尚，倡导创新精神、坚持习近平新时代中国特色社会主义思想为指导，引导和推动发明创造、创新创业活动的开展，发掘和支持发明创造人才，促进发明创造成果的转化和运用，为建设创新型云南和经济社会发展做出贡献。
         </span>
       </div>
+    <div class="text-wrapper_15 flex-col">
       <span class="text_15">业务范围</span>
       <span class="text_16">Scope&nbsp;of&nbsp;business</span>
+    </div>
       <div class="section_3 flex-row justify-between">
-        <div class="group_1 flex-col">
+        <div class="flex-col">
           <span class="text_17">友情链接</span>
         <div class="image-wrapper">
           <a class="zhongguofamingixiehuilink" :href="'https://www.cainet.org.cn/'" target="_blank">
@@ -134,6 +176,13 @@
             src="./assets/img/MasterDDSSlicePNG8cb406f431c7707c47f95449d6611f60.png"
           />
           <span class="text_25">活动组织与成果转化</span>
+          <div class="text-wrapper_12">
+            <span class="paragraph_4">
+              󰀠展示交流：举办发明成果展览、推介会，组织参与国内外发明展会（如中国国际发明展）；
+              <br />
+              󰀠成果应用：促进发明成果转化落地，服务知识产权商业化运用。
+            </span>
+          </div>
         </div>
         <div class="box_11 flex-col">
           <img
@@ -142,6 +191,13 @@
             src="./assets/img/MasterDDSSlicePNG90270cf460214645e6ae55a16ff28d18.png"
           />
           <span class="text_26">会员服务与权益保障</span>
+          <div class="text-wrapper_13">
+            <span class="paragraph_5">
+              󰀠权益维护：保障发明者合法权益，收集并反馈相关诉求；
+              <br />
+              󰀠人才激励：推荐优秀发明人才，表彰杰出发明者、创业者和支持单位/个人。
+            </span>
+          </div>
         </div>
         <div class="box_12 flex-col">
           <img
@@ -150,6 +206,13 @@
             src="./assets/img/MasterDDSSlicePNG5687267abfd31340efa0df3778456b67.png"
           />
           <span class="text_27">能力建设与咨询服务</span>
+          <div class="text-wrapper_14">
+            <span class="paragraph_6">
+              󰀠培训赋能：开展发明创造、技术创新及知识产权领域的专业培训和咨询；
+              <br />
+              󰀠课题研究：承接政府及企业委托的科技、知识产权类课题研究与项目策划。
+            </span>
+          </div>
         </div>
         <div class="box_13 flex-col">
           <img
@@ -158,6 +221,11 @@
             src="./assets/img/MasterDDSSlicePNG7469424679d0e7140c2c3137e6449936.png"
           />
           <span class="text_28">国际合作与交流</span>
+          <div class="text-wrapper_15">
+            <span class="paragraph_7">
+              󰀠国际联动：与国内外发明协会建立合作，推动跨区域技术交流与资源对接。
+            </span>
+          </div>
         </div>
       </div>
     </div>

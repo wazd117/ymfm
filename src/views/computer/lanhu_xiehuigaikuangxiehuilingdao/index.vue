@@ -1,5 +1,46 @@
 <template>
   <div class="page flex-col">
+
+    <div class="top-banner flex-col">
+      <span class="text_28">云南省发明协会</span>
+    </div>
+
+      <div class="text-container_1 flex-col">
+        <div class="text-container_2 flex-row justify-between align-center">
+          <div class="text-with-image flex-row align-center"></div>
+          <span class="text_29">Yunnan&nbsp;Province&nbsp;Association&nbsp;of&nbsp;Inventors </span>
+           <img class="thumbnail_1" src="./assets/img/MasterDDSSlicePNG5226391ac2d1006ca17818153b41a789.png" />
+        </div>
+        <div class="text-wrapper_19 flex-col"><span class="text_30">云南省发明协会</span>
+          <div class="image-wrapper_3 flex-col">
+          <img
+            class="label_1"
+            referrerpolicy="no-referrer"
+            src="./assets/img/MasterDDSSlicePNG8de44bc4b86c0f0d99c3e2face903706.png"
+          />
+          <img
+            class="label_2"
+            referrerpolicy="no-referrer"
+            src="./assets/img/MasterDDSSlicePNGdca3da43733296a7c96e5d88d14cf365.png"
+          /> 
+         </div>
+       </div>
+      </div>
+
+      <div class="box_14 flex-col justify-end">
+        <span class="paragraph_20">
+          推动发明
+          <br />
+          保护创新
+        </span>
+        <div class="text-wrapper_20 flex-row">
+          <router-link class="text_31" to="xiehuigaikuangxiehuijianjie">协会简介</router-link>
+          <router-link class="text_32" to="xiehuigaikuangxiehuizhangcheng">协会章程</router-link>
+          <span class="text_33">协会领导</span>
+          <router-link class="text_34" to="xiehuigaikuangxiehuiyeji">协会业绩</router-link>
+        </div>
+      </div>
+
   <div class="group_1 flex-row">
     <div class="image-contianer_1">
       <img

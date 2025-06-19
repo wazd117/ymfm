@@ -1,9 +1,11 @@
 <template>
   <div class="wrapper">
   <div class="page flex-col">
+
     <div class="top-banner flex-col">
       <span class="text_21">云南省发明协会</span>
      </div>
+
       <div class="text-container_1 flex-col">
         <div class="text-container_2 flex-row justify-between">
           <span class="text_20">Yunnan&nbsp;Province&nbsp;Association&nbsp;of&nbsp;Inventors</span>
@@ -23,6 +25,7 @@
           /> 
         </div>
       </div>
+
       <div class="box_10 flex-col justify-end">
         <span class="paragraph_20">
           推动发明
@@ -36,6 +39,7 @@
           <router-link class="text_26" to="xiehuigaikuangxiehuiyeji">协会业绩</router-link>
         </div>
       </div>
+
     <div class="block_1 flex-row">
       <div class="image-contianer_1">
       <img
@@ -385,49 +389,9 @@
             </span>
           </div>
         </div>
-        <div class="section_7 flex-col">
-          <span class="text_27">友情链接</span>
-          <img
-            class="image_7"
-            referrerpolicy="no-referrer"
-            src="./assets/img/famingxiehuilogo.png"
-            />
-          <img
-            class="image_8"
-            referrerpolicy="no-referrer"
-            src="./assets/img/shengwuyiyaologo.png"
-            />
-          <img
-            class="image_9"
-            referrerpolicy="no-referrer"
-            src="./assets/img/ynuzhishichanquanlogo.png"
-            />
-        </div>
-    <div class="section_8 flex-col">
-      <div class="text-group_1 flex-col justify-between">
-        <span class="text_28">云南省发明协会</span>
-        <span class="text_29">地址：云南省昆明市五华区学府路海伦先生&nbsp;1&nbsp;栋&nbsp;11&nbsp;楼</span>
-      </div>
-      <div class="text-group_2 flex-col justify-between">
-        <span class="text_30">联系方式</span>
-        <span class="paragraph_19">
-          副秘书长—刘志强：15368258967
-          <br />
-          副秘书长—张毓洀：18669000423
-          <br />
-          电话总机：0871-68588876
-          <br />
-          邮编：655000
-        </span>
-      </div>
-      <a class="text-wrapper_15 flex-col" :href="'/mobile/lianxiwomen'"><span class="text_31">联系我们&nbsp;→</span></a>
-      <div class="text-wrapper_16 flex-col">
-      <span class="text_32">版权所有：Copyright&nbsp;©&nbsp;云南省发明协会&nbsp;All&nbsp;rights&nbsp;reserved.</span>
-    </div>
-    </div>
       </div>
       <div class="box_7 flex-col justify-between">
-        <div class="text-wrapper_12 flex-row">
+       <div class="text-wrapper_12 flex-row">
         <div class="block_3 flex-col">
           <span class="text_14">友情链接</span>
           <div class="image-wrapper">
@@ -495,5 +459,5 @@ export default {
   methods: {}
 };
 </script>
-<style scoped lang="css" src="./assets/index.css" />
+<style scoped lang="css" src="./assets/index.rem.css" />
 <style scoped lang="css" src="@/assets/common.css" />

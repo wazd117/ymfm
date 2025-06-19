@@ -1,15 +1,17 @@
 <template>
   <div class="page flex-col">
+
       <div class="top-banner flex-col">
       <span class="text_21">云南省发明协会</span>
       </div>
+
        <div class="text-container_1 flex-col">
         <div class="text-container_2 flex-row justify-between align-center">
-          <div class="text-with-image flex-row align-center"></div>
-          <span class="text_23">Yunnan&nbsp;Province&nbsp;Association&nbsp;of&nbsp;Inventors </span>
-           <img class="thumbnail_1" src="./assets/img/MasterDDSSlicePNG5226391ac2d1006ca17818153b41a789.png" />
+             <span class="text_23">Yunnan&nbsp;Province&nbsp;Association&nbsp;of&nbsp;Inventors </span>
+          <img class="thumbnail_1" src="./assets/img/MasterDDSSlicePNG5226391ac2d1006ca17818153b41a789.png" />
         </div>
-        <div class="text-wrapper_13 flex-col"><span class="text_22">云南省发明协会</span><div class="image-wrapper_1 flex-col">
+        <div class="text-wrapper_13 flex-col"><span class="text_22">云南省发明协会</span>
+          <div class="image-wrapper_1 flex-col">
           <img
             class="label_1"
             referrerpolicy="no-referrer"
@@ -32,9 +34,9 @@
         </span>
         <div class="text-wrapper_14 flex-row">
           <router-link class="text_27" to="xiehuigaikuangxiehuijianjie">协会简介</router-link>
-          <span class="text_24">协会章程</span>
+          <router-link class="text_24" to="xiehuigaikuangxiehuizhangcheng">协会章程</router-link>
           <router-link class="text_25" to="xiehuigaikuangxiehuilingdao">协会领导</router-link>
-          <router-link class="text_26" to="xiehuigaikuangxiehuiyeji">协会业绩</router-link>
+          <span class="text_26">协会业绩</span>
         </div>
       </div>
 
