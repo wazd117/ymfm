@@ -1,10 +1,6 @@
 <template>
   <div class="page flex-col">
 
-    <div class="top-banner flex-col">
-      <span class="text_30">云南省发明协会</span>
-    </div>
-
       <div class="text-container_1 flex-col">
         <div class="text-container_2 flex-row justify-between align-center">
           <div class="text-with-image flex-row align-center"></div>
@@ -104,9 +100,9 @@
       <span class="text_16">Scope&nbsp;of&nbsp;business</span>
     </div>
       <div class="section_3 flex-row justify-between">
-        <div class="flex-col">
+        <div class="group_1 flex-col">
           <span class="text_17">友情链接</span>
-        <div class="image-wrapper">
+          <div class="image-wrapper">
           <a class="zhongguofamingixiehuilink" :href="'https://www.cainet.org.cn/'" target="_blank">
           <img
             class="image_2"
@@ -128,10 +124,23 @@
           </div>
         </div>
         <div class="group_2 flex-col">
-          <div class="box_7 flex-row">
+          <div class="box_7 flex-col">
             <div class="text-group_1 flex-col justify-between">
               <span class="text_18">云南省发明协会</span>
               <span class="text_19">地址：云南省昆明市五华区学府路海伦先生&nbsp;1&nbsp;栋&nbsp;11&nbsp;楼</span>
+            </div>
+            <div class="text-group_2_1 flex-col justify-between">
+              <span class="text_20_1">联系方式</span>
+              <span class="paragraph_2_1">
+                副秘书长—刘志强：15368258967
+                <br />
+                副秘书长—张毓洀：18669000423
+                <br />
+                电话总机：0871-68588876
+                <br />
+                邮编：655000
+              </span>
+              <a class="text-wrapper_9_1 flex-col" :href="'/computer/lianxiwomen'" target="_blank"><span class="text_21_1">联系我们&nbsp;→</span></a>
             </div>
           </div>
           <div class="box_8 flex-row justify-between">
@@ -221,7 +230,7 @@
             src="./assets/img/MasterDDSSlicePNG7469424679d0e7140c2c3137e6449936.png"
           />
           <span class="text_28">国际合作与交流</span>
-          <div class="text-wrapper_15">
+          <div class="text-wrapper_16">
             <span class="paragraph_7">
               󰀠国际联动：与国内外发明协会建立合作，推动跨区域技术交流与资源对接。
             </span>
