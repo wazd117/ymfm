@@ -1,7 +1,8 @@
 <template>
   <div class="page flex-col">
-    <div class="section_1 flex-row">
-    <div class="image-contianer_1">
+   <div class="section_1 flex-row">
+
+    <!-- <div class="image-contianer_1">
       <img
         class="image_1"
         referrerpolicy="no-referrer"
@@ -13,9 +14,13 @@
         referrerpolicy="no-referrer"
         src="./assets/img/MasterDDSSlicePNGdca3da43733296a7c96e5d88d14cf365.png"
       />
-    </div>
-      <div class="group_1 flex-col">
-        <a class="text-wrapper_1 flex-col" :href="'/computer/shouye'" target="_blank"><span class="text_1">首页</span></a>
+    </div> -->
+ 
+      <div class="group_1">
+        <div class="titlebutton">
+           <TitleButton />
+        </div>
+        <!-- <a class="text-wrapper_1 flex-col" :href="'/computer/shouye'" target="_blank"><span class="text_1">首页</span></a>
       </div>
       <div class="group_2 flex-col">
         <span class="text_2">Yunnan&nbsp;Province&nbsp;Association&nbsp;of&nbsp;Inventors</span>
@@ -37,8 +42,9 @@
       </div>
       <div class="group_7 flex-col">
         <a class="text-wrapper_6 flex-col" :href="'/computer/huiyuanzhijiadanweihuiyuan'" target="_blank"><span class="text_8">会员之家</span></a>
-      </div>
-    </div>
+      </div> -->
+       </div>
+
     <div class="section_2 flex-col">
       <div class="box_2 flex-col">
         <div class="text-wrapper_7 flex-col"><span class="text_9">Contact</span></div>
@@ -107,6 +113,9 @@
            </a>
            </div>
           </a>
+         <div class="text-wrapper_15 flex-col">
+             <span class="text_25">版权所有：Copyright&nbsp;©&nbsp;云南省发明协会&nbsp;All&nbsp;rights&nbsp;reserved.</span>
+         </div>
         </div>
         <div class="group_10 flex-col">
           <div class="box_6 flex-row">
@@ -133,13 +142,17 @@
         </div>
       </div>
     </div>
-    <div class="text-wrapper_15 flex-col">
-      <span class="text_25">版权所有：Copyright&nbsp;©&nbsp;云南省发明协会&nbsp;All&nbsp;rights&nbsp;reserved.</span>
-    </div>
+
+  </div>
   </div>
 </template>
 <script>
+
+import TitleButton from '../title_button/TitleButton.vue';
 export default {
+    components: {
+    TitleButton,
+  },
   data() {
     return {
       constants: {}

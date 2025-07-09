@@ -17,11 +17,22 @@ html {
 }
 
 .group_1 {
+  display: flex;
+  flex-wrap: wrap;
+  position: relative;
+  flex-direction: row !important;
   border-radius: 4px;
   height: 1.227rem;
-  border: 1px solid rgba(56, 70, 114, 1);
-  width: 2.8rem;
-  margin: 3.2rem 0 0 0;
+  width: 0;
+  margin: 0rem auto auto 0rem;
+}
+
+.titlebutton {
+  position: fixed;
+  width: 100%;
+  z-index: 10;
+  background-color: rgba(255, 251, 239, 1);
+  height: 5.066rem;
 }
 
 .text-wrapper_1 {
@@ -236,10 +247,12 @@ html {
 }
 
 .image-contianer_1 {
+  position:fixed;
   display: flex;
   flex-direction: column; 
   align-items: center; 
   justify-content: center; 
+  margin-top: -0.3rem;
 }
 
 .image_1 {
@@ -263,6 +276,7 @@ html {
 .section_2 {
   width: 51.2rem;
   height: 48.587rem;
+  margin-left: -15rem ;
 }
 
 .box_2 {
@@ -271,6 +285,8 @@ html {
     100% no-repeat;
   background-size: 100% 100%;
   width: 51.2rem;
+
+  margin-top: 5.067rem;
 }
 
 .text-wrapper_7 {
@@ -390,7 +406,7 @@ html {
   height: 0.8rem;
   overflow-wrap: break-word;
   color: rgba(56, 70, 114, 1);
-  font-size: 0.373rem;
+  font-size: 0.36rem;
   font-family: Source Han Serif CN-Regular;
   font-weight: NaN;
   text-align: left;

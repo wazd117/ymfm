@@ -16,6 +16,14 @@ html {
   height: 5.067rem;
 }
 
+.titlebutton {
+  position: fixed;
+  width: 100%;
+  z-index: 10;
+  background-color: rgba(255, 251, 239, 1);
+  height: 5.066rem;
+}
+
 .box_2 {
   border-radius: 4px;
   height: 1.227rem;

@@ -14,6 +14,10 @@ html {
   background-color: rgba(255, 251, 239, 1);
   width: 51.2rem;
   height: 5.067rem;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1000;
 }
 
 .image_10 {
@@ -34,15 +38,49 @@ html {
   height: 1.227rem;
   border: 1px solid rgba(56, 70, 114, 1);
   width: 3.28rem;
-  margin: 3.2rem 0 0 2.614rem;
+  margin: 3.2rem 0 0 -0.9rem;
+  align-items: center;    
+  justify-content: center;
 }
+
+/* 按钮背景鼠标悬置效果与文字效果 */
+.text-wrapper_1:hover,
+.text-wrapper_2:hover,
+.text-wrapper_3:hover,
+.text-wrapper_4:hover,
+.text-wrapper_5:hover,
+.text-wrapper_6:hover,
+.text-wrapper_26:hover,
+.text-wrapper_27:hover,
+.text-wrapper_28:hover,
+.text-wrapper_29:hover {
+  background-color: white;
+  border: 1px solid rgba(56, 70, 114, 1);
+}
+
+.text-wrapper_1:hover .text_1,
+.text-wrapper_2:hover .text_4,
+.text-wrapper_3:hover .text_5,
+.text-wrapper_4:hover .text_6,
+.text-wrapper_5:hover .text_7,
+.text-wrapper_6:hover .text_8,
+.text-wrapper_26:hover .text_47,
+.text-wrapper_27:hover .text_48,
+.text-wrapper_28:hover .text_49,
+.text-wrapper_29:hover .text_50 {
+  color: rgba(56, 70, 114, 1);
+}
+
+
 
 .text-wrapper_1 {
   background-color: rgba(56, 70, 114, 1);
   border-radius: 2px;
   height: 1.067rem;
   width: 3.12rem;
-  margin: 0.08rem 0 0 0.08rem;
+  margin: 0;
+  align-items: center;     
+  justify-content: center;
 }
 
 .text_1 {
@@ -56,7 +94,8 @@ html {
   text-align: center;
   white-space: nowrap;
   line-height: 0.694rem;
-  margin: 0.187rem 0 0 1.094rem;
+  margin: 0;          
+  text-align: center;
 }
 
 .section_1 {
@@ -65,14 +104,307 @@ html {
   border: 1px solid rgba(56, 70, 114, 1);
   width: 3.28rem;
   margin: 3.2rem 0 0 0.347rem;
+  align-items: center;    
+  justify-content: center;
 }
 
 .text-wrapper_2 {
+  display: flex;
   background-color: rgba(56, 70, 114, 1);
   border-radius: 2px;
   height: 1.067rem;
   width: 3.12rem;
-  margin: 0.08rem 0 0 0.08rem;
+  margin: 0;
+  align-items: center;     
+  justify-content: center;
+}
+
+.section_1 {
+  position: relative;
+}
+
+.dropdown_1 {
+  display: none;
+  flex-direction: column;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: rgba(255, 255, 255, 1);
+  padding: 1rem;
+  border: 1px solid rgba(204, 204, 204, 1);
+  border-radius: 8px;
+  width: 6rem;
+  z-index: 100;
+}
+
+.text-wrapper_2:hover .dropdown_1 {
+  display: flex ;
+}
+
+.dropdown_1-title {
+  position: relative !important;
+  font-size: 0.5rem;
+  font-weight: bold;
+  color: rgba(56, 70, 114, 1);
+  border-bottom: 2px solid rgba(56, 70, 114, 1); 
+  width: 2rem;
+  text-align: left;
+  margin-left: -0.4rem;          
+  padding-left: 0; 
+}
+
+.dropdown_1-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  flex-wrap: wrap;
+  gap: 0.05rem 0.1rem; 
+  width: 4rem;
+}
+
+.dropdown_1-list li {
+  display: block;      
+  box-sizing: border-box;   
+}
+
+.dropdown_1-list li:nth-child(even) {
+    position: relative;
+    margin-left: 1rem; 
+}
+
+.dropdown_1-list li:nth-child(odd) {
+     position: relative ;
+     margin-left:-0.4rem ;
+}
+
+
+.dropdown_1-list a {
+  color:rgba(51, 51, 51, 1) !important;
+  font-size: 0.47rem !important;      
+  line-height: 1.4;    
+  white-space: nowrap ;      
+}
+
+.dropdown_1-list a {
+  display: inline-block;
+  font-size: 0.426rem;
+  color: rgba(56, 70, 114, 1);
+  text-decoration: none;
+}
+
+.dropdown_2 {
+  display: none;
+  flex-direction: column;
+  background-color: rgba(255, 255, 255, 1);
+  padding: 1rem;
+  border: 1px solid rgba(204, 204, 204, 1);
+  border-radius: 8px;
+  width: 6rem;
+  z-index: 100;
+  position: absolute;
+  left: 0;
+  top: 100%;
+}
+
+.text-wrapper_3:hover .dropdown_2 {
+  display: flex ;
+}
+
+.dropdown_2-title {
+  position: relative !important;
+  font-size: 0.5rem;
+  font-weight: bold;
+  color: rgba(56, 70, 114, 1);
+  border-bottom: 2px solid rgba(56, 70, 114, 1); 
+  width: 2rem;
+  text-align: left;
+  margin-left: -0.4rem;
+  padding-left: 0; 
+}
+
+.dropdown_2-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  flex-wrap: wrap;
+  gap: 0.05rem 0.1rem; 
+  width: 4rem;
+}
+
+.dropdown_2-list li {
+  display: block;      
+  box-sizing: border-box;   
+}
+
+.dropdown_2-list li:nth-child(even) {
+    position: relative;
+    margin-left: 1rem; 
+}
+
+.dropdown_2-list li:nth-child(odd) {
+     position: relative ;
+     margin-left:-0.4rem ;
+}
+
+
+.dropdown_2-list a {
+  color:rgba(51, 51, 51, 1) !important;
+  font-size: 0.47rem !important;      
+  line-height: 1.4;    
+  white-space: nowrap ;      
+}
+
+.dropdown_2-list a {
+  display: inline-block;
+  font-size: 0.426rem;
+  color: rgba(56, 70, 114, 1);
+  text-decoration: none;
+}
+
+.dropdown_3 {
+  display: none;
+  flex-direction: column;
+  background-color: rgba(255, 255, 255, 1);
+  padding: 1rem;
+  border: 1px solid rgba(204, 204, 204, 1);
+  border-radius: 8px;
+  width: 6.8rem;
+  z-index: 100;
+  position: absolute;
+  left: 0;
+  top: 100%;
+}
+
+.text-wrapper_4:hover .dropdown_3 {
+  display: flex ;
+}
+
+.dropdown_3-title {
+  position: relative !important;
+  font-size: 0.5rem;
+  font-weight: bold;
+  color: rgba(56, 70, 114, 1);
+  border-bottom: 2px solid rgba(56, 70, 114, 1); 
+  width: 2rem;
+  text-align: left;
+  margin-left: -0.4rem;
+  padding-left: 0; 
+}
+
+.dropdown_3-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  flex-wrap: wrap;
+  gap: 0.05rem 0.1rem; 
+  width: 4rem;
+}
+
+.dropdown_3-list li {
+  display: block;      
+  box-sizing: border-box;   
+}
+
+.dropdown_3-list li:nth-child(even) {
+    position: relative;
+    margin-left: 1rem; 
+}
+
+.dropdown_3-list li:nth-child(odd) {
+     position: relative ;
+     margin-left:-0.4rem ;
+}
+
+
+.dropdown_3-list a {
+  color:rgba(51, 51, 51, 1) !important;
+  font-size: 0.47rem !important;      
+  line-height: 1.4;    
+  white-space: nowrap ;      
+}
+
+.dropdown_3-list a {
+  display: inline-block;
+  font-size: 0.426rem;
+  color: rgba(56, 70, 114, 1);
+  text-decoration: none;
+}
+
+.dropdown_4 {
+  display: none;
+  flex-direction: column;
+  background-color: rgba(255, 255, 255, 1);
+  padding: 1rem;
+  border: 1px solid rgba(204, 204, 204, 1);
+  border-radius: 8px;
+  width: 6.8rem;
+  z-index: 100;
+  position: absolute;
+  left: 0;
+  top: 100%;
+}
+
+.text-wrapper_6:hover .dropdown_4 {
+  display: flex ;
+}
+
+.dropdown_4-title {
+  position: relative !important;
+  font-size: 0.5rem;
+  font-weight: bold;
+  color: rgba(56, 70, 114, 1);
+  border-bottom: 2px solid rgba(56, 70, 114, 1); 
+  width: 2rem;
+  text-align: left;
+  margin-left: -0.4rem;
+  padding-left: 0; 
+}
+
+.dropdown_4-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  flex-wrap: wrap;
+  gap: 0.05rem 0.1rem; 
+  width: 4rem;
+}
+
+.dropdown_4-list li {
+  display: block;      
+  box-sizing: border-box;   
+}
+
+.dropdown_4-list li:nth-child(even) {
+    position: relative;
+    margin-left: 1rem; 
+}
+
+.dropdown_4-list li:nth-child(odd) {
+     position: relative ;
+     margin-left:-0.4rem ;
+}
+
+
+.dropdown_4-list a {
+  color:rgba(51, 51, 51, 1) !important;
+  font-size: 0.47rem !important;      
+  line-height: 1.4;    
+  white-space: nowrap ;      
+}
+
+.dropdown_4-list a {
+  display: inline-block;
+  font-size: 0.426rem;
+  color: rgba(56, 70, 114, 1);
+  text-decoration: none;
 }
 
 .text_4 {
@@ -86,7 +418,8 @@ html {
   text-align: center;
   white-space: nowrap;
   line-height: 0.694rem;
-  margin: 0.187rem 0 0 0.614rem;
+  margin: 0;          
+  text-align: center;
 }
 
 .section_2 {
@@ -95,14 +428,19 @@ html {
   border: 1px solid rgba(56, 70, 114, 1);
   width: 3.28rem;
   margin: 3.2rem 0 0 0.32rem;
+  align-items: center;    
+  justify-content: center;
 }
 
 .text-wrapper_3 {
   background-color: rgba(56, 70, 114, 1);
+  position: relative;
   border-radius: 2px;
   height: 1.067rem;
   width: 3.12rem;
-  margin: 0.08rem 0 0 0.08rem;
+  margin: 0;
+  align-items: center;     
+  justify-content: center;
 }
 
 .text_5 {
@@ -116,7 +454,8 @@ html {
   text-align: center;
   white-space: nowrap;
   line-height: 0.694rem;
-  margin: 0.187rem 0 0 0.614rem;
+  margin: 0;
+  text-align: center;
 }
 
 .box_32 {
@@ -164,6 +503,8 @@ html {
   height: 1.227rem;
   border: 1px solid rgba(56, 70, 114, 1);
   width: 3.28rem;
+  justify-content: center;
+  align-items: center;
 }
 
 .text-wrapper_4 {
@@ -171,7 +512,10 @@ html {
   border-radius: 2px;
   height: 1.067rem;
   width: 3.12rem;
-  margin: 0.08rem 0 0 0.08rem;
+  margin: 0;
+  position: relative;
+  align-items: center;     
+  justify-content: center;
 }
 
 .text_6 {
@@ -185,7 +529,8 @@ html {
   text-align: center;
   white-space: nowrap;
   line-height: 0.694rem;
-  margin: 0.187rem 0 0 0.614rem;
+  margin: 0;
+  text-align: center;
 }
 
 .block_5 {
@@ -194,6 +539,8 @@ html {
   border: 1px solid rgba(56, 70, 114, 1);
   margin-left: 0.32rem;
   width: 3.28rem;
+  align-items: center;    
+  justify-content: center;
 }
 
 .text-wrapper_6 {
@@ -201,7 +548,10 @@ html {
   border-radius: 2px;
   height: 1.067rem;
   width: 3.12rem;
-  margin: 0.08rem 0 0 0.08rem;
+  margin: 0;
+  align-items: center;     
+  justify-content: center;
+  position: relative;
 }
 
 .text_8 {
@@ -215,7 +565,8 @@ html {
   text-align: center;
   white-space: nowrap;
   line-height: 0.694rem;
-  margin: 0.187rem 0 0 0.614rem;
+  margin: 0;
+  text-align: center;
 }
 
 .group_8 {
@@ -224,6 +575,8 @@ html {
   border: 1px solid rgba(56, 70, 114, 1);
   margin-left: 0.32rem;
   width: 3.28rem;
+  align-items: center;    
+  justify-content: center;
 }
 
 .text-wrapper_26 {
@@ -231,7 +584,9 @@ html {
   border-radius: 2px;
   height: 1.067rem;
   width: 3.12rem;
-  margin: 0.08rem 0 0 0.08rem;
+  margin: 0;
+  align-items: center;     
+  justify-content: center;
 }
 
 .text_47 {
@@ -245,7 +600,8 @@ html {
   text-align: center;
   white-space: nowrap;
   line-height: 0.694rem;
-  margin: 0.187rem 0 0 0.614rem;
+  margin: 0;
+  text-align: center;
 }
 
 .group_9 {
@@ -254,6 +610,8 @@ html {
   border: 1px solid rgba(56, 70, 114, 1);
   margin-left: 0.32rem;
   width: 3.28rem;
+  align-items: center;    
+  justify-content: center;
 }
 
 .text-wrapper_27 {
@@ -261,7 +619,9 @@ html {
   border-radius: 2px;
   height: 1.067rem;
   width: 3.12rem;
-  margin: 0.08rem 0 0 0.08rem;
+  margin: 0;
+  align-items: center;     
+  justify-content: center;
 }
 
 .text_48 {
@@ -275,7 +635,8 @@ html {
   text-align: center;
   white-space: nowrap;
   line-height: 0.694rem;
-  margin: 0.187rem 0 0 0.854rem;
+  margin: 0;
+  text-align: center;
 }
 
 .box_30 {
@@ -284,6 +645,8 @@ html {
   border: 1px solid rgba(56, 70, 114, 1);
   width: 3.28rem;
   margin: 3.2rem 0 0 0.32rem;
+  align-items: center;    
+  justify-content: center;
 }
 
 .text-wrapper_28 {
@@ -291,7 +654,9 @@ html {
   border-radius: 2px;
   height: 1.067rem;
   width: 3.12rem;
-  margin: 0.08rem 0 0 0.08rem;
+  margin: 0;
+  align-items: center;     
+  justify-content: center;
 }
 
 .text_49 {
@@ -305,7 +670,8 @@ html {
   text-align: center;
   white-space: nowrap;
   line-height: 0.694rem;
-  margin: 0.187rem 0 0 0.854rem;
+  margin: 0;
+  text-align: center;
 }
 
 .box_31 {
@@ -314,6 +680,8 @@ html {
   border: 1px solid rgba(56, 70, 114, 1);
   width: 3.28rem;
   margin: 3.2rem 0 0 0.32rem;
+  align-items: center;    
+  justify-content: center;
 }
 
 .text-wrapper_29 {
@@ -321,7 +689,9 @@ html {
   border-radius: 2px;
   height: 1.067rem;
   width: 3.12rem;
-  margin: 0.08rem 0 0 0.08rem;
+  margin: 0;
+  align-items: center;     
+  justify-content: center;
 }
 
 .text_50 {
@@ -335,7 +705,8 @@ html {
   text-align: center;
   white-space: nowrap;
   line-height: 0.694rem;
-  margin: 0.187rem 0 0 0.134rem;
+  margin: 0;
+  text-align: center;
 }
 
 .section_4 {
@@ -344,6 +715,8 @@ html {
   border: 1px solid rgba(56, 70, 114, 1);
   width: 3.28rem;
   margin: 3.2rem 0 0 0.32rem;
+  align-items: center;    
+  justify-content: center;
 }
 
 .text-wrapper_5 {
@@ -351,7 +724,9 @@ html {
   border-radius: 2px;
   height: 1.067rem;
   width: 3.12rem;
-  margin: 0.08rem 0 0 0.08rem;
+  margin: 0;
+  align-items: center;     
+  justify-content: center;
 }
 
 .text_7 {
@@ -365,7 +740,8 @@ html {
   text-align: center;
   white-space: nowrap;
   line-height: 0.694rem;
-  margin: 0.187rem 0 0 0.614rem;
+  margin: 0;
+  text-align: center;
 }
 
 .image_1 {
@@ -375,6 +751,7 @@ html {
 }
 
 .block_19 {
+  margin-top: 5rem;
   position: relative;
   width: 51.2rem;
   height: 77.52rem;

@@ -1,7 +1,10 @@
 <template>
   <div class="page flex-col">
     <div class="section_1 flex-row">
-      <div class="image-contianer_1">
+      <div class="titlebutton">
+        <TitleButton />
+      </div>
+      <!-- <div class="image-contianer_1">
        <img
          class="image_1"
          referrerpolicy="no-referrer"
@@ -36,7 +39,7 @@
       </div>
       <div class="box_7 flex-col">
         <a class="text-wrapper_6 flex-col" :href="'/computer/huiyuanzhijiadanweihuiyuan'" target="_blank"><span class="text_8">会员之家</span></a>
-      </div>
+      </div> -->
     </div>
     <div class="section_2 flex-col">
       <div class="box_8 flex-col justify-end">
@@ -340,7 +343,12 @@
   </div>
 </template>
 <script>
+
+import TitleButton from "../title_button/TitleButton";
 export default {
+  components: {
+    TitleButton
+  },
   data() {
     return {
       constants: {}

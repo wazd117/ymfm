@@ -6,32 +6,69 @@
         class="image_1"
         referrerpolicy="no-referrer"
         src="./assets/img/MasterDDSSlicePNG9e4f0afb7009ff9f61fbd480c98d69ef.png"
-      />
-      <img
+       />
+       <img
         class="image_10"
         referrerpolicy="no-referrer"
         src="./assets/img/MasterDDSSlicePNGdca3da43733296a7c96e5d88d14cf365.png"
-      />
+       />
       </div>
 
       <div class="block_2 flex-col">
-        <a class="text-wrapper_1 flex-col" :href="'/computer/shouye'" target="_blank"><span class="text_1">首页</span></a>
+        <router-link class="text-wrapper_1 flex-col" to="/computer/shouye"><span class="text_1">首页</span></router-link>
       </div>
       <div class="section_1 flex-col">
-         <a class="text-wrapper_2 flex-col" :href="'/computer/xiehuigaikuangxiehuijianjie'" target="_blank"><span class="text_4">协会概况</span></a>
+         <div class="text-wrapper_2 flex-col"><span class="text_4">协会概况</span>
+          <div class="dropdown_1">
+            <div class="dropdown_1-title">协会概况</div>
+            <ul class="dropdown_1-list">
+             <li><a href="/computer/xiehuigaikuangxiehuijianjie">协会简介</a></li>     
+             <li><a href="/computer/xiehuigaikuangxiehuizhangcheng">协会章程</a></li> 
+             <li><a href="/computer/xiehuigaikuangxiehuilingdao">协会领导</a></li>
+             <li><a href="/computer/xiehuigaikuangxiehuiyeji">协会业绩</a></li>
+            </ul>
+          </div>
+        </div>
       </div>
       <div class="section_2 flex-col">
-        <a class="text-wrapper_3 flex-col" :href="'/computer/xiehuidongtaitongzhigonggao'" target="_blank"><span class="text_5">协会动态</span></a>
+        <div class="text-wrapper_3 flex-col"><span class="text_5">协会动态</span>
+          <div class="dropdown_2">
+            <div class="dropdown_2-title">协会动态</div>
+            <ul class="dropdown_2-list">
+             <li><a href="/computer/xiehuidongtaitongzhigonggao">通知公告</a></li>     
+             <li><a>要闻动态</a></li> 
+             <li><a>会员动态</a></li>
+            </ul>
+          </div>
+        </div>
       </div>
       <div class="box_32 flex-col">
         <span class="text_2">Yunnan&nbsp;Province&nbsp;Association&nbsp;of&nbsp;Inventors</span>
         <span class="text_3">云南省发明协会</span>
         <div class="box_33 flex-row justify-between">
           <div class="section_3 flex-col">
-            <a class="text-wrapper_4 flex-col" :href="'/computer/jiangxiangzhuanqufamingchuangyejiang'" target="_blank"><span class="text_6">奖项专区</span></a>
+            <div class="text-wrapper_4 flex-col"><span class="text_6">奖项专区</span>
+            <div class="dropdown_3">
+           <div class="dropdown_3-title">奖项专区</div>
+            <ul class="dropdown_3-list">
+             <li><a href="/computer/jiangxiangzhuanqufamingchuangyejiang">发明创业奖</a></li>     
+             <li><a>少儿发明奖</a></li> 
+            </ul>
+           </div>
+           </div>
           </div>
           <div class="block_5 flex-col">
-            <a class="text-wrapper_6 flex-col" :href="'/computer/huiyuanzhijiadanweihuiyuan'" target="_blank"><span class="text_8">会员之家</span></a>
+            <div class="text-wrapper_6 flex-col" to="/computer/huiyuanzhijiadanweihuiyuan"><span class="text_8">会员之家</span>
+             <div class="dropdown_4">
+              <div class="dropdown_4-title">会员之家</div>
+              <ul class="dropdown_4-list">
+              <li><a>入会申请</a></li>     
+              <li><a>       </a></li>
+              <li><a href="/computer/huiyuanzhijiadanweihuiyuan">单位会员</a></li>    
+              <li><a href="/computer/huiyuanzhijiagerenhuiyuan">个人会员</a></li>
+             </ul>
+            </div>
+            </div>
           </div>
           <div class="group_8 flex-col">
             <div class="text-wrapper_26 flex-col"><span class="text_47">研学活动</span></div>
@@ -48,9 +85,10 @@
         <div class="text-wrapper_29 flex-col"><span class="text_50">最新技术推广</span></div>
       </div>
       <div class="section_4 flex-col">
-        <a class="text-wrapper_5 flex-col" href="/computer/lianxiwomen" target="_blank"><span class="text_7">联系我们</span></a>
+        <router-link class="text-wrapper_5 flex-col" to="/computer/lianxiwomen"><span class="text_7">联系我们</span></router-link>
       </div>
     </div>
+    
     <div class="block_19 flex-col">
       <div class="box_1 flex-col">
         <div class="box_34 flex-row justify-between">
@@ -297,6 +335,8 @@
   </div>
 </template>
 <script>
+
+
 export default {
   data() {
     return {

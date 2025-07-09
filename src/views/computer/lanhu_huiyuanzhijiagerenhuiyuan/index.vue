@@ -1,7 +1,10 @@
 <template>
   <div class="page flex-col">
     <div class="box_1 flex-row">
-     <div class="image-contianer_1">
+      <div class="titlebutton">
+        <TitleButton />
+      </div>
+     <!-- <div class="image-contianer_1">
       <img
         class="image_1"
         referrerpolicy="no-referrer"
@@ -37,7 +40,7 @@
       </div>
       <div class="box_4 flex-col">
         <div class="text-wrapper_6 flex-col"><span class="text_8">会员之家</span></div>
-      </div>
+      </div> -->
       
     </div>
     <div class="box_5 flex-col">
@@ -124,7 +127,12 @@
   </div>
 </template>
 <script>
+
+import TitleButton from "../title_button/TitleButton";
 export default {
+  components: {
+    TitleButton
+  },
   data() {
     return {
       loopData0: [
