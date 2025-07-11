@@ -76,9 +76,6 @@
       <div class="box_31 flex-col">
         <div class="text-wrapper_29 flex-col"><span class="text_50">最新技术推广</span></div>
       </div>
-      <div class="section_4 flex-col">
-        <router-link class="text-wrapper_5 flex-col" to="/computer/lianxiwomen"><span class="text_7">联系我们</span></router-link>
-      </div>
       </div>
 </template>
 

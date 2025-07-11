@@ -663,8 +663,10 @@ html {
 }
 
 .image-wrapper a {
+  position: relative;
   display: inline-block;
-  transition: transform 0.5s ease; /* 添加过渡效果 */
+  transition: transform 1s ease; /* 添加过渡效果 */
+  overflow: hidden;
 }
 
 .image-wrapper a:hover img {
@@ -789,6 +791,14 @@ html {
   white-space: nowrap;
   line-height: 0.534rem;
   margin: 0.267rem 0 0 0.534rem;
+}
+
+.text-wrapper_10:hover {
+  background-color: rgba(255, 255, 255, 1);
+}
+
+.text-wrapper_10:hover .text_18{
+  background-color: rgba(56, 70, 114, 1);
 }
 
 .text-wrapper_11 {

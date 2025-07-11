@@ -1498,6 +1498,14 @@ html {
   margin: 0.267rem 0 0 0.534rem;
 }
 
+.text-wrapper_14:hover{
+  background-color: rgba(255, 255, 255, 1);
+}
+
+.text-wrapper_14:hover .text_35{
+  color:rgba(56, 70, 114, 1);
+}
+
 .box_36 {
   width: 51.2rem;
   height: 8.4rem;
@@ -1531,18 +1539,22 @@ html {
 }
 
 .image-wrapper_3 {
+  overflow: hidden;
   width: 24.56rem;
   height: 3.094rem;
   margin: 1.067rem 0 2.48rem 4.8rem;
 }
 
 .image-wrapper_3 a {
+  position: relative;
   display: inline-block;
-  transition: transform 0.5s ease; /* 添加过渡效果 */
+  transition: transform 1s ease; /* 添加过渡效果 */
+  overflow: hidden;
 }
 
 .image-wrapper_3 a:hover img {
   transform: scale(1.1); /* 鼠标悬停时放大图片 */
+    border: none;
 }
 
 .image_7 {
@@ -1663,6 +1675,15 @@ html {
   white-space: nowrap;
   line-height: 0.534rem;
   margin: 0.267rem 0 0 0.534rem;
+}
+
+.text-wrapper_15:hover {
+  background-color: rgba(255, 255, 255, 1);
+}
+
+.text-wrapper_15:hover .text_40 {
+    color: rgba(56, 70, 114, 1);
+
 }
 
 .box_12 {

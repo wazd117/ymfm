@@ -245,11 +245,14 @@
     <div class="text-wrapper_11 flex-col">
       <span class="text_29">版权所有：Copyright&nbsp;©&nbsp;云南省发明协会&nbsp;All&nbsp;rights&nbsp;reserved.</span>
     </div>
+
   </div>
 </template>
 <script>
 
 import TitleButton from '../title_button/TitleButton.vue';
+
+
 export default {
 
     components: {
@@ -265,3 +268,4 @@ export default {
 </script>
 <style scoped lang="css" src="./assets/index.rem.css" />
 <style scoped lang="css" src="@/assets/common.css" />
+
