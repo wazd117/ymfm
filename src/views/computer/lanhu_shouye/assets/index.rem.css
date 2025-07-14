@@ -821,7 +821,13 @@ html {
   margin: 0.267rem 0 0 0.267rem;
 }
 
+.tongzhilink {
+    position: relative;
+  display: inline-block;
+}
+
 .paragraph_2 {
+    position: absolute;
   width: 0.854rem;
   height: 1.067rem;
   overflow-wrap: break-word;
@@ -832,6 +838,33 @@ html {
   text-align: left;
   line-height: 0.534rem;
   margin: 0.374rem 0 0 0.48rem;
+  text-align: left;
+  transition: opacity 0.7s ease;
+  white-space: pre-wrap; /* 支持换行，兼容 <br> */
+}
+
+.paragraph_2_hover {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, 50%);
+  pointer-events: none;
+    color: rgba(198, 176, 91, 1);
+}
+
+.tongzhilink .paragraph_2_hover {
+  opacity: 0;
+  transition: opacity 0.7s ease;
+}
+
+.tongzhilink:hover .paragraph_2 {
+    opacity: 0;
+}
+
+.tongzhilink:hover .paragraph_2_hover {
+    opacity: 1;
+    color: rgba(255, 255, 255, 1);
+    font-size: 0.7rem;
 }
 
 .text_9 {
@@ -893,7 +926,13 @@ html {
   margin: 0.267rem 0 0 0.267rem;
 }
 
+.yaowenlink {
+    position: relative;
+  display: inline-block;
+}
+
 .paragraph_3 {
+    position: absolute;
   width: 0.854rem;
   height: 1.067rem;
   overflow-wrap: break-word;
@@ -904,6 +943,33 @@ html {
   text-align: left;
   line-height: 0.534rem;
   margin: 0.374rem 0 0 0.48rem;
+  text-align: left;
+  transition: opacity 0.7s ease;
+  white-space: pre-wrap; /* 支持换行，兼容 <br> */
+}
+
+.paragraph_3_hover {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, 50%);
+  pointer-events: none;
+    color: rgba(198, 176, 91, 1);
+}
+
+.yaowenlink .paragraph_3_hover {
+  opacity: 0;
+  transition: opacity 0.7s ease;
+}
+
+.yaowenlink:hover .paragraph_3 {
+    opacity: 0;
+}
+
+.yaowenlink:hover .paragraph_3_hover {
+    opacity: 1;
+    color: rgba(255, 255, 255, 1);
+    font-size: 0.7rem;
 }
 
 .text-group_1 {
@@ -941,7 +1007,13 @@ html {
   margin: 0.267rem 0 0 0.267rem;
 }
 
+.huiyuanlink {
+  position: relative;
+  display: inline-block;
+}
+
 .paragraph_4 {
+  position: absolute;
   width: 0.854rem;
   height: 1.067rem;
   overflow-wrap: break-word;
@@ -952,7 +1024,36 @@ html {
   text-align: left;
   line-height: 0.534rem;
   margin: 0.374rem 0 0 0.48rem;
+  transition: opacity 0.7s ease;
+  white-space: pre-wrap; /* 支持换行，兼容 <br> */
 }
+
+.paragraph_4_hover {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, 50%);
+  pointer-events: none;
+  color: rgba(198, 176, 91, 1);
+}
+
+.huiyuanlink .paragraph_4_hover {
+  opacity: 0;
+  transition: opacity 0.7s ease;
+}
+
+.huiyuanlink:hover .paragraph_4 {
+    opacity: 0;
+}
+
+.huiyuanlink:hover .paragraph_4_hover {
+    opacity: 1;
+    color: rgba(255, 255, 255, 1);
+    font-size: 0.7rem;
+}
+
+
+
 
 .text-group_2 {
   width: 1.867rem;
@@ -1024,6 +1125,17 @@ html {
   margin: 1.654rem 0 0 4.267rem;
 }
 
+.block_10:hover {
+  background-color: rgba(56, 70, 114, 1);
+}
+
+.block_10:hover .text_13,
+.block_10:hover .text_15,
+.block_10:hover .text_16,
+.block_10:hover .text_17 {
+  color: white;
+}
+
 .section_20 {
   width: 10.88rem;
   height: 1.014rem;
@@ -1048,6 +1160,8 @@ html {
   background-color: rgba(183, 38, 38, 1);
   height: 0.72rem;
   width: 1.334rem;
+  border-top-right-radius: 12px;
+  border-bottom-left-radius: 12px;
 }
 
 .text_14 {
@@ -1055,7 +1169,7 @@ html {
   height: 0.4rem;
   overflow-wrap: break-word;
   color: rgba(255, 255, 255, 1);
-  font-size: 0.32rem;
+  font-size: 0.38rem;
   font-family: Source Han Serif CN-Regular;
   font-weight: NaN;
   text-align: left;
@@ -1213,6 +1327,17 @@ html {
   margin-top: 0.267rem;
 }
 
+.block_11:hover {
+  background-color: rgba(56, 70, 114, 1);
+}
+
+.block_11:hover .text_18,
+.block_11:hover .text_19,
+.block_11:hover .text_20,
+.block_11:hover .text_21 {
+  color: white; 
+}
+
 .block_13 {
   box-shadow: 0px 2px 14px 0px rgba(106, 90, 37, 0.1);
   background-color: rgba(255, 255, 255, 0.6);
@@ -1299,10 +1424,29 @@ html {
   margin-top: 0.267rem;
 }
 
+.block_13:hover {
+  background-color:rgba(56, 70, 114, 1) ;
+}
+
+.block_13:hover .text_22,
+.block_13:hover .text_23,
+.block_13:hover .text_24,
+.block_13:hover .text_25 {
+  color: white; 
+}
+
 .group_20 {
   width: 4.267rem;
   height: 12.987rem;
   margin: 1.6rem 4.294rem 0 3.147rem;
+}
+
+.text-wrapper_12:hover{
+  background-color: white;
+}
+
+.text-wrapper_12:hover .text_30{
+  color: rgba(56, 70, 114, 1);
 }
 
 .text_26 {
@@ -1770,6 +1914,14 @@ html {
   white-space: nowrap;
   line-height: 0.534rem;
   margin: 0.267rem 0 0 0.534rem;
+}
+
+.text-wrapper_17:hover {
+  background-color:rgba(56, 70, 114, 1) ;
+}
+
+.text-wrapper_17:hover .text_44 {
+  color: white;
 }
 
 .group_22 {

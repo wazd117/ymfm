@@ -106,39 +106,36 @@
         <div class="box_3 flex-col"></div>
       </div>
       <div class="box_35 flex-row justify-between">
-        <a class="block_7 flex-col" :href="'http://www.ynfm.com.cn/zh-hans/node/48'" target="_blank">
+        <a class="block_7 flex-col" href="http://www.ynfm.com.cn/zh-hans/node/48">
           <div class="text-wrapper_7 flex-col">
-            <span class="paragraph_2">
-              通知
-              <br />
-              公告
-            </span>
+            <router-link to="/computer/xiehuidongtaitongzhigonggao" class="tongzhilink">
+            <span class="paragraph_2">通知<br />公告</span>
+            <span class="paragraph_2_hover">→</span>
+            </router-link>
           </div>
           <span class="text_9">2025-02-17</span>
           <span class="text_10">关于举办第&nbsp;20&nbsp;届宋庆龄少年儿童发明奖的通知</span>
         </a>
         <div class="group_19 flex-col justify-between">
           <div class="section_19 flex-row justify-between">
-            <div class="image-text_25 flex-col justify-between">
-              <a class="block_9 flex-col" href="http://www.ynfm.com.cn/zh-hans/node/44" target="_blank">
+            <a class="image-text_25 flex-col justify-between" href="http://www.ynfm.com.cn/zh-hans/node/44">
+              <a class="block_9 flex-col">
                 <div class="text-wrapper_8 flex-col">
-                  <span class="paragraph_3">
-                    要闻
-                    <br />
-                    动态
-                  </span>
+                  <router-link to="" class="yaowenlink">
+                  <span class="paragraph_3">要闻<br />动态</span>
+                  <span class="paragraph_3_hover">→</span>
+                </router-link>
                 </div>
               </a>
               <span class="text-group_1">2024-03-16</span>
-            </div>
-            <a class="image-text_26 flex-col justify-between" href="http://www.ynfm.com.cn/zh-hans/node/46" target="_blank">
+            </a>
+            <a class="image-text_26 flex-col justify-between" href="http://www.ynfm.com.cn/zh-hans/node/46">
               <div class="group_1 flex-col">
                 <div class="text-wrapper_9 flex-col">
-                  <span class="paragraph_4">
-                    会员
-                    <br />
-                    动态
-                  </span>
+                <router-link to="" class="huiyuanlink">
+                  <span class="paragraph_4">会员<br />动态</span>
+                  <span class="paragraph_4_hover">→</span>
+                </router-link>
                 </div>
               </div>
               <span class="text-group_2">2024-03-16</span>
@@ -221,7 +218,7 @@
           <span class="text_27">Awards&nbsp;area</span>
           <span class="text_28">发明创业奖</span>
           <span class="text_29">少儿发明奖</span>
-          <a class="text-wrapper_12 flex-col" :href="'/computer/jiangxiangzhuanqufamingchuangyejiang'" target="_blank"><span class="text_30">了解更多&nbsp;→</span></a>
+          <a class="text-wrapper_12 flex-col" :href="'/computer/jiangxiangzhuanqufamingchuangyejiang'"><span class="text_30">了解更多&nbsp;→</span></a>
         </div>
       </div>
       <div class="box_8 flex-row">
@@ -315,7 +312,7 @@
           <span class="text_43">
             云南省发明协会在中国发明协会的指导下成立于1986年7月25日，协会的宗旨是：遵守宪法、法律、法规和国家政策，践行社会主义核心价值观，遵守社会道德风尚，倡导创新精神、坚持习近平新时代中国特色社会主义思想为指导，引导和推动发明创造、创新创业活动的开展，发掘和支持发明创造人才，促进发明创造成果的转化和运用，为建设创新型云南和经济社会发展做出贡献。
           </span>
-          <a class="text-wrapper_17 flex-col" :href="'/computer/xiehuigaikuangxiehuijianjie'" target="_blank"><span class="text_44">了解更多&nbsp;→</span></a>
+          <a class="text-wrapper_17 flex-col" :href="'/computer/xiehuigaikuangxiehuijianjie'"><span class="text_44">了解更多&nbsp;→</span></a>
         </div>
         <div class="group_22 flex-row">
           <div class="list_10 flex-row">
@@ -368,6 +365,21 @@ export default {
           lanhuimage0: 'https://lanhu-oss-2537-2.lanhuapp.com/MasterDDSSlicePNG8639ed92f8046a73589a2d383f950290.png',
           lanhutext0: '协会业绩',
           url:'/computer/xiehuigaikuangxiehuiyeji'
+        }
+      ],
+      blockList: [
+        {
+          time:"2024-03-16",
+          isNew: true,
+          title:"团结奋进新时代 聚力开创新格局——中国发明协会第八次全国会员代表大会暨第十五届中国发明家论坛成功举办",
+
+
+        },
+        {
+
+        },
+        {
+
         }
       ],
       constants: {}
