@@ -1261,7 +1261,7 @@ html {
   text-align: left;
   white-space: nowrap;
   line-height: 0.374rem;
-  margin: 0.534rem 0 0 0.507rem;
+  margin-top: 0.534rem;
 }
 
 .block_12 {
@@ -1358,7 +1358,7 @@ html {
   text-align: left;
   white-space: nowrap;
   line-height: 0.374rem;
-  margin: 0.534rem 0 0 0.507rem;
+  margin-top: 0.534rem;
 }
 
 .group_2 {
@@ -1489,6 +1489,14 @@ html {
   margin: 1.6rem 0 0 0.027rem;
 }
 
+.text_28.active {
+  color: rgba(56, 70, 114, 1);
+}
+
+.text_28.dimmed {
+  color: rgba(51, 51, 51, 1); /* 被“非选中”时的状态 */
+}
+
 .text_29 {
   width: 2.667rem;
   height: 0.774rem;
@@ -1501,6 +1509,10 @@ html {
   white-space: nowrap;
   line-height: 0.774rem;
   margin: 1.067rem 0 0 0.027rem;
+}
+
+.text_29.active {
+  color: rgba(56, 70, 114, 1)
 }
 
 .text-wrapper_12 {

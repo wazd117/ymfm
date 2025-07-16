@@ -486,12 +486,6 @@ html {
   line-height: 0.614rem;
 }
 
-.text-wrapper_12 {
-  height: 2.614rem;
-  border: 1px solid rgba(56, 70, 114, 1);
-  margin-top: 1.6rem;
-  width: 13.334rem;
-}
 
 .text_18 {
   width: 0.854rem;
@@ -511,6 +505,14 @@ html {
   height: 1.067rem;
   margin-top: 1.6rem;
   width: 3.76rem;
+}
+
+.text-wrapper_13:hover {
+  background-color: white;
+}
+
+.text-wrapper_13:hover {
+  color: rgba(56, 70, 114, 1);
 }
 
 .text_19 {
@@ -702,7 +704,7 @@ html {
 }
 
 .text-wrapper_14:hover .text_24{
-  background-color: rgba(56, 70, 114, 1);
+  color: rgba(56, 70, 114, 1);
 }
 
 .text-wrapper_15 {

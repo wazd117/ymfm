@@ -8,6 +8,8 @@ import { CheckboxGroup, Checkbox } from 'vant';
 import { Tab, Tabs } from 'vant';
 import { Tabbar, TabbarItem } from 'vant';
 import { NavBar, Icon, Tag } from 'vant';
+import ElementUI from 'element-ui';
+import 'element-ui/lib/theme-chalk/index.css';
 
 Vue.component('van-field', Field)
 Vue.component('van-button', Button)
@@ -26,6 +28,7 @@ Vue.component('van-tabbar-item', TabbarItem)
 Vue.component('van-nav-bar', NavBar)
 Vue.component('van-icon', Icon)
 Vue.component('van-tag', Tag)
+Vue.use(ElementUI)
 Vue.config.productionTip = false
 
 

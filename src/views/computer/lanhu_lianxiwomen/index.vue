@@ -71,11 +71,28 @@
       </div>
       <div class="box_4 flex-row justify-between">
         <div class="group_8 flex-col justify-between">
-          <div class="text-wrapper_9 flex-col"><span class="text_15">姓名</span></div>
+          <!-- <div class="text-wrapper_9 flex-col"><span class="text_15">姓名</span></div>
           <div class="text-wrapper_10 flex-col"><span class="text_16">电话</span></div>
           <div class="text-wrapper_11 flex-col"><span class="text_17">邮箱</span></div>
           <div class="text-wrapper_12 flex-col"><span class="text_18">留言</span></div>
-          <div class="text-wrapper_13 flex-col"><span class="text_19">提交</span></div>
+          <div class="text-wrapper_13 flex-col"><span class="text_19">提交</span></div> -->
+               <el-form :model="form" :rules="rules" ref="formRef" label-width="80px" class="my-form">
+          <el-form-item label="姓名" prop="name">
+               <el-input clearable=true v-model="form.name" placeholder="请输入姓名" />
+          </el-form-item>
+             <el-form-item label="电话" prop="phone">
+                 <el-input clearable=true v-model="form.phone" placeholder="请输入电话" />
+             </el-form-item>
+               <el-form-item label="邮箱" prop="email">
+                   <el-input clearable=true v-model="form.email" placeholder="请输入邮箱" />
+               </el-form-item>
+             <el-form-item label="留言" prop="message">
+               <el-input type="textarea" maxlength="240" clearable=true v-model="form.message" placeholder="请输入留言" rows="4" />
+              </el-form-item>
+            <el-form-item>
+              <el-button class="text-wrapper_13" type="primary" @click="submitForm">提交</el-button>
+            </el-form-item>
+              </el-form>
         </div>
         <img
           class="image_2"
@@ -137,7 +154,7 @@
                 邮编：655000
               </span>
             </div>
-            <a class="text-wrapper_14 flex-col" :href="'/computer/lianxiwomen'" target="_blank"><span class="text_24">联系我们&nbsp;→</span></a>
+            <a class="text-wrapper_14 flex-col" :href="'/computer/lianxiwomen'"><span class="text_24">联系我们&nbsp;→</span></a>
           </div>
         </div>
       </div>
@@ -155,11 +172,49 @@ export default {
   },
   data() {
     return {
+    form: {
+        name: '',
+        phone: '',
+        email: '',
+        message: ''
+      },
+      rules: {
+        name: [{ required: true, message: '请输入姓名', trigger: 'blur' }],
+        phone: [{ required: true, message: '请输入电话', trigger: 'blur' },
+          { 
+          pattern: /^1[3-9]\d{9}|6\d{7}$/,  // 正则验证 11 位手机号
+          message: '请输入正确的电话',
+          trigger: 'blur'
+        },
+        ],
+        email: [{ required: true, message: '请输入邮箱', trigger: 'blur' }],
+        message: [{ required: true, message: '请输入留言', trigger: 'blur' }]
+      },
       constants: {}
     };
   },
-  methods: {}
+  methods: {
+        submitForm() {
+      this.$refs.formRef.validate(valid => {
+        if (valid) {
+          console.log('提交成功:', this.form)
+          // 处理提交逻辑
+        } else {
+          console.log('表单验证失败')
+        }
+      })
+    }
+  }
+  
 };
 </script>
+
+<style scoped>
+.my-form {
+  width: 16rem; /* 或你想要的尺寸 */
+  margin-left: -2rem; /* 保留原 margin 位置 */
+}
+</style>
+
 <style scoped lang="css" src="./assets/index.rem.css" />
 <style scoped lang="css" src="@/assets/common.css" />

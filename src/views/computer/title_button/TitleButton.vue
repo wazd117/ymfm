@@ -1,8 +1,9 @@
 <template>
   <div class="title-button flex-row" >
-
       <div class="image-contianer_1">
+          <a :href="'./shouye'">
         <img :src="require('./assets/img/MasterDDSSlicePNG9e4f0afb7009ff9f61fbd480c98d69ef.png')" class="image_1" />
+        </a>
         <img :src="require('./assets/img/MasterDDSSlicePNGdca3da43733296a7c96e5d88d14cf365.png')" class="image_10" />
       </div> 
     
@@ -104,12 +105,6 @@ export default {
   margin: 0.694rem 5.6rem 0 0.827rem;
 }
 
-.image_10 {
-  width: 2.187rem;
-  height: 0.64rem;
-  margin: 0.3rem auto 0.5rem 1.6rem;
-}
-
 .title-button {
   display: flex;
   flex: none;
@@ -129,7 +124,7 @@ export default {
 .image_10 {
   width: 2.187rem;
   height: 0.64rem;
-  margin: 0.3rem auto 0.5rem 1.6rem;
+  margin: 0 auto 0.5rem 1.6rem;
 }
 
 .image-contianer_1 {

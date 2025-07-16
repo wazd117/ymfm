@@ -150,7 +150,28 @@
         </div>
       </div>
       <div class="box_5 flex-row">
-        <div class="block_10 flex-col">
+         <div
+           v-for="(item, index) in filteredJiangxiangList"
+          :key="index"
+          :class="[item.blockClass, 'flex-col']"
+         >
+
+          <div class="section_20 flex-row justify-between">
+            <span :class="[item.timeClass]">{{item.time}}</span>
+            <div v-if="item.isNew" class="text-wrapper_11 flex-col"><span class="text_14">NEW</span></div>
+          </div>
+          <div class="box_7 flex-col"></div>
+          <span :class="[item.titleClass]">{{item.title}}</span>
+          <div class="image-text_27 flex-col justify-between">
+            <img class="image_3" referrerpolicy="no-referrer" :src="item.imageSrc" />
+            <div class="text-group_24 flex-col justify-between">
+              <span :class="[item.contentClass]">{{item.content}}</span>
+              <a :class="[item.detailClass]" :href="[item.detailLink]">查看详情→</a>
+            </div>
+          </div>
+
+      </div>
+        <!-- <div class="block_10 flex-col">
           <div class="section_20 flex-row justify-between">
             <span class="text_13">2024-03-16</span>
             <div class="text-wrapper_11 flex-col"><span class="text_14">NEW</span></div>
@@ -172,8 +193,8 @@
               <a class="text_17" href="http://www.ynfm.com.cn/zh-hans/node/22" target="_blank">查看详情→</a>
             </div>
           </div>
-        </div>
-        <div class="block_11 flex-col">
+        </div> -->
+        <!-- <div class="block_11 flex-col">
           <span class="text_18">2024-02-22</span>
           <div class="block_12 flex-col"></div>
           <span class="text_19">
@@ -192,8 +213,8 @@
               <a class="text_21" href="http://www.ynfm.com.cn/zh-hans/node/21" target="_blank">查看详情→</a>
             </div>
           </div>
-        </div>
-        <div class="block_13 flex-col">
+        </div> -->
+        <!-- <div class="block_13 flex-col">
           <span class="text_22">2024-01-10</span>
           <div class="group_2 flex-col"></div>
           <span class="text_23">
@@ -212,12 +233,28 @@
               <a class="text_25" href="http://www.ynfm.com.cn/zh-hans/node/20" target="_blank">查看详情→</a>
             </div>
           </div>
-        </div>
+        </div> -->
+         
         <div class="group_20 flex-col">
           <span class="text_26">奖项专区</span>
           <span class="text_27">Awards&nbsp;area</span>
-          <span class="text_28">发明创业奖</span>
-          <span class="text_29">少儿发明奖</span>
+          <span
+             class="text_28"
+              :class="{ active: currentTab === 'chuangye', dimmed: currentTab === 'shaonian' }"
+             @click="currentTab = 'chuangye'"
+            >
+               发明创业奖
+               <span v-if="currentTab === 'chuangye'">———</span>
+              </span>
+
+          <span
+            class="text_29"
+            :class="{ active: currentTab === 'shaonian' }"
+            @click="currentTab = 'shaonian'"
+           >
+             少儿发明奖
+                <span v-if="currentTab === 'shaonian'">———</span>
+                </span>
           <a class="text-wrapper_12 flex-col" :href="'/computer/jiangxiangzhuanqufamingchuangyejiang'"><span class="text_30">了解更多&nbsp;→</span></a>
         </div>
       </div>
@@ -299,7 +336,7 @@
                 邮编：655000
               </span>
             </div>
-            <a class="text-wrapper_15 flex-col" :href="'/computer/lianxiwomen'" target="_blank"><span class="text_40">联系我们&nbsp;→</span></a>
+            <a class="text-wrapper_15 flex-col" :href="'/computer/lianxiwomen'"><span class="text_40">联系我们&nbsp;→</span></a>
           </div>
         </div>
       </div>
@@ -367,24 +404,111 @@ export default {
           url:'/computer/xiehuigaikuangxiehuiyeji'
         }
       ],
-      blockList: [
+       
+      currentTab: 'chuangye',
+      jiangxiangzhuanqulist_chuangye: [
         {
+          blockClass: "block_10",
+          timeClass: "text_13",
+          titleClass: "text_15",
+          contentClass: "text_16",
+          detailClass: "text_17",
           time:"2024-03-16",
           isNew: true,
+          imageSrc: "/img/shouye/MasterDDSSlicePNG1a231e5ffcdcd85ccb122128d2c35094.png",
+          detailLink:"http://www.ynfm.com.cn/zh-hans/node/22",
           title:"团结奋进新时代 聚力开创新格局——中国发明协会第八次全国会员代表大会暨第十五届中国发明家论坛成功举办",
+          content:"2021年9月27-28日，经中央和国家机关工委和中国科协批准同意，中国发明协会第八次全国会员代表大会暨第十五届中...",
+          xiangqing:"查看详情→",
+        },
+        {
+          blockClass: "block_11",
+          timeClass: "text_18",
+          titleClass: "text_19",
+          contentClass: "text_20",
+          detailClass: "text_21",
+          time:"2024-02-22",
+          isNew: false,
+          imageSrc: "/img/shouye/MasterDDSSlicePNG2816defd052434fc9fd242ee734e9e69.png",
+          detailLink:"http://www.ynfm.com.cn/zh-hans/node/21",
+          title:"第十四届中国发明家论坛暨第十一届发明创业奖·人物奖颁奖典礼在北京隆重举行——厚植创新创业沃土，合作共赢美好未来",
+          content:"2020年7月29日，中国中医科学院名誉院长、天津中医药大学校长张伯礼院士在北京中国科技会堂举行的中国发明家论坛...",
+          xiangqing:"查看详情→",
+        },
+        {
+          blockClass: "block_13",
+          timeClass: "text_22",
+          titleClass: "text_23",
+          contentClass: "text_24",
+          detailClass: "text_25",
+          time:"2024-01-10",
+          isNew: false,
+          imageSrc: "/img/shouye/MasterDDSSlicePNG79fcd9ef863657d98d4bf066df67b928.png",
+          detailLink:"http://www.ynfm.com.cn/zh-hans/node/20",
+          title:"第十三届中国发明家论坛暨发明创业奖颁奖典礼在京举行——庆祝新中国成立70周年 致敬科技发展与发明创新",
+          content:"为了进一步贯彻落实党的十九大精神和习近平新时代中国特色社会主义思想，贯彻落实李克强总理对中国发明协会第七次...",
+          xiangqing:"查看详情→",
+        },
+        
+      ],
 
+      jiangxiangzhuanqulist_shaonian:[
+        {
+          blockClass: "block_10",
+          timeClass: "text_13",
+          titleClass: "text_15",
+          contentClass: "text_16",
+          detailClass: "text_17",
+          time:"2024-03-16",
+          isNew: true,
+          imageSrc: "/img/shouye/MasterDDSSlicePNG1a231e5ffcdcd85ccb122128d2c35094.png",
+          detailLink:"http://www.ynfm.com.cn/zh-hans/node/22",
+          title:"testtesttesttesttesttesttesttesttesttestttetsttstetettesttesttesttest",
+          content:"testtesttesttesttesttesttesttesttesttesttetstettstetsttetstttstettsttsttetsttetstettsttetstte",
+          xiangqing:"查看详情→",
 
         },
         {
-
+          blockClass: "block_11",
+          timeClass: "text_18",
+          titleClass: "text_19",
+          contentClass: "text_20",
+          detailClass: "text_21",
+          time:"2024-02-22",
+          isNew: false,
+          imageSrc: "/img/shouye/MasterDDSSlicePNG1a231e5ffcdcd85ccb122128d2c35094.png",
+          detailLink:"http://www.ynfm.com.cn/zh-hans/node/21",
+          title:"testtesttesttesttesttesttesttesttesttestttetsttstetettesttesttesttest",
+          content:"testtesttesttesttesttesttesttesttesttestttetsttstetettesttesttesttestttesttetstet",
+          xiangqing:"查看详情→",
         },
         {
+          blockClass: "block_13",
+          timeClass: "text_22",
+          titleClass: "text_23",
+          contentClass: "text_24",
+          detailClass: "text_25",
+          time:"2024-01-10",
+          isNew: false,
+          imageSrc: "/img/shouye/MasterDDSSlicePNG1a231e5ffcdcd85ccb122128d2c35094.png",
+          detailLink:"http://www.ynfm.com.cn/zh-hans/node/20",
+          title:"testtesttesttesttesttesttesttesttesttestttetsttstetettesttesttesttes",
+          content:"testtesttesttesttesttesttesttesttesttestttetsttstetettesttesttesttestttesttetstet",
+          xiangqing:"查看详情→",
+        },
 
-        }
       ],
       constants: {}
     };
   },
+
+    computed: {
+  filteredJiangxiangList() {
+    return this.currentTab === 'chuangye'
+      ? this.jiangxiangzhuanqulist_chuangye
+      : this.jiangxiangzhuanqulist_shaonian;
+  }
+    },
   methods: {}
 };
 </script>
