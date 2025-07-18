@@ -673,6 +673,7 @@ html {
 }
 
 .section_4 {
+  display: flex;
   position: absolute;
   left: -0.026rem;
   top: 21.974rem;

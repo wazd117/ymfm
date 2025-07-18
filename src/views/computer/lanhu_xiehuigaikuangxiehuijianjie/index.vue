@@ -165,8 +165,35 @@
         </div>
       </div>
       <span class="text_22">About&nbsp;the&nbsp;association</span>
-      <div class="section_4 flex-row">
-        <div class="box_9 flex-col">
+    
+ <div class="section_4 flex-row">
+
+  <!-- 用来确定最基础的鼠标移入后的返回index逻辑，以及对应的box索引 -->
+  <div
+    v-for="(box, index) in boxes"
+    :key="index"
+    :class="getBoxClass(index)"
+    @mouseover="hoveredIndex = index"
+    @mouseleave="hoveredIndex = null"
+  >
+   
+    <img
+      :class="getImageClass(index)"
+      :src="getIconSrc(index)" 
+      alt="icon"
+    />
+
+    <div :class="getTextClass(index)">
+      {{ box.text }}
+    </div>
+
+    <div v-if="shouldShowContent(index)" class="text-wrapper_10">
+      <p class="paragraph_3" v-html="box.paragraph"></p>
+    </div>
+  </div>
+  
+  </div>
+        <!-- <div class="box_9 flex-col">
           <img
             class="image_3"
             referrerpolicy="no-referrer"
@@ -239,8 +266,8 @@
               󰀠国际联动：与国内外发明协会建立合作，推动跨区域技术交流与资源对接。
             </span>
           </div>
-        </div>
-      </div>
+        </div> -->
+     
     </div>
     <div class="text-wrapper_11 flex-col">
       <span class="text_29">版权所有：Copyright&nbsp;©&nbsp;云南省发明协会&nbsp;All&nbsp;rights&nbsp;reserved.</span>
@@ -252,7 +279,6 @@
 
 import TitleButton from '../title_button/TitleButton.vue';
 
-
 export default {
 
     components: {
@@ -260,12 +286,128 @@ export default {
   },
   data() {
     return {
+      hoveredIndex: null,  // 当前悬浮的盒子索引
+
+      boxes: [
+        { text: '政策宣传与创新引导', paragraph: '&#8226政策普及：宣传国家科技创新、知识产权相关法规，推动发明创造与创新创业实践；<br />&#8226氛围营造：倡导“尊重知识、崇尚创新、诚信守法”的社会环境，激励群众参与发明活动。',icon_hover:require('@/views/computer/lanhu_xiehuigaikuangxiehuijianjie/assets/img/xuanchuantuiguangnormal.png'),icon_normal:require('@/views/computer/lanhu_xiehuigaikuangxiehuijianjie/assets/img/xuanchuantuiguang.png') },
+        { text: '活动组织与成果转化', paragraph: '&#8226展示交流：举办发明成果展览、推介会，组织参与国内外发明展会（如中国国际发明展）；<br />&#8226成果应用：促进发明成果转化落地，服务知识产权商业化运用。' ,icon_hover:require('@/views/computer/lanhu_xiehuigaikuangxiehuijianjie/assets/img/MasterDDSSlicePNG8cb406f431c7707c47f95449d6611f60.png'),icon_normal:require('@/views/computer/lanhu_xiehuigaikuangxiehuijianjie/assets/img/zhaochengguo-copy.png')},
+        { text: '会员服务与权益保障', paragraph: '&#8226权益维护：保障发明者合法权益，收集并反馈相关诉求；<br />&#8226人才激励：推荐优秀发明人才，表彰杰出发明者、创业者和支持单位/个人。' ,icon_hover:require('@/views/computer/lanhu_xiehuigaikuangxiehuijianjie/assets/img/MasterDDSSlicePNG90270cf460214645e6ae55a16ff28d18.png'),icon_normal:require('@/views/computer/lanhu_xiehuigaikuangxiehuijianjie/assets/img/huiyuan-copy.png')},
+        { text: '能力建设与咨询服务', paragraph: '&#8226培训赋能：开展发明创造、技术创新及知识产权领域的专业培训和咨询；<br />&#8226课题研究：承接政府及企业委托的科技、知识产权类课题研究与项目策划。' ,icon_hover:require('@/views/computer/lanhu_xiehuigaikuangxiehuijianjie/assets/img/MasterDDSSlicePNG5687267abfd31340efa0df3778456b67.png'),icon_normal:require('@/views/computer/lanhu_xiehuigaikuangxiehuijianjie/assets/img/zixun.png')},
+        { text: '国际合作与交流', paragraph: '&#8226国际联动：与国内外发明协会建立合作，推动跨区域技术交流与资源对接。',icon_hover:require('@/views/computer/lanhu_xiehuigaikuangxiehuijianjie/assets/img/MasterDDSSlicePNG7469424679d0e7140c2c3137e6449936.png'),icon_normal:require('@/views/computer/lanhu_xiehuigaikuangxiehuijianjie/assets/img/hezuo-copy.png') },
+      ],
       constants: {}
     };
   },
-  methods: {}
+methods: {
+
+
+  getBoxClass(index) {
+    if (index === 0) {   // 政策引导盒子显示逻辑，由于第一个盒子逻辑特殊因此单独用一个控制流处理
+      
+    if (this.hoveredIndex !== null && this.hoveredIndex !== 0) {   
+      return 'box_10';
+    }
+    else {
+      return 'box_9';  
+    }
+  }
+    return this.hoveredIndex === index ? 'box_9' : 'box_10';  // 其他盒子显示逻辑
+  },
+
+  getIconSrc(index) {
+    if (index === 0) { 
+      //第一个盒子的icon显示逻辑
+    if (this.hoveredIndex !== null && this.hoveredIndex !== 0) {   
+      return this.boxes[index].icon_normal;
+    }
+    else {
+      return this.boxes[index].icon_hover; 
+    }
+  }
+    return this.hoveredIndex === index ? this.boxes[index].icon_normal : this.boxes[index].icon_hover ;  // 其他盒子显示逻辑
+  },
+
+  getImageClass(index) {
+    if (index === 0) {
+      if (this.hoveredIndex !== null && this.hoveredIndex !== 0){
+        return 'image_4';
+      }
+      else  {
+        return 'image_3';
+      }
+    }
+    return this.hoveredIndex === index ? 'image_3' : 'image_4';
+  },
+
+  getTextClass(index) {
+    if (index === 0 ) return 'text_23';
+    return this.hoveredIndex === index ? 'text_23' : 'text_25';
+  },
+  shouldShowContent(index) {
+    if (index === 0) {
+      if (this.hoveredIndex !== null && this.hoveredIndex !== 0){
+        return 0;
+      }
+      else  {
+        return 1;
+      }
+    }
+    return this.hoveredIndex === index ? 1 : 0 ;
+  }
+
+},
+
 };
 </script>
 <style scoped lang="css" src="./assets/index.rem.css" />
 <style scoped lang="css" src="@/assets/common.css" />
+<style scoped>
+.section_4 {
+  width: 100%;
+  padding: 0;
+}
 
+.box {
+  background-color: #f0f0f0;
+  padding: 20px;
+  text-align: center;
+  border-radius: 4px;
+  transition: all 0.3s ease; /* 平滑过渡 */
+}
+
+.box-content {
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.image {
+  background-color: #b0bec5;
+  border-radius: 50%;
+  margin-bottom: 1rem;
+  transition: all 0.3s ease;
+}
+
+.text {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.paragraph {
+  font-size: 1rem;
+  color: #777;
+}
+
+/* 悬浮时的效果 */
+.is-hovered {
+  background-color: #409EFF;
+  color: white;
+}
+
+.is-hovered .image {
+  background-color: #fff;
+}
+
+</style>
