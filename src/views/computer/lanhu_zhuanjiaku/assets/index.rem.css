@@ -1,0 +1,169 @@
+html {
+    font-size: 37.5px;
+}
+
+.page {
+  background-color: rgba(246, 243, 223, 1);
+  position: relative;
+  max-width: 51.2rem;
+  height: 74.5rem;
+  
+  overflow: hidden;
+}
+
+.titlebutton {
+  position: fixed;
+  width: 100%;
+  z-index: 10;
+  height: 5.066rem;
+}
+
+.box_1 {
+  margin-top: 5.45rem;
+  position: relative;
+  width: 51.2rem;
+
+}
+
+.section_1 { 
+  width: 51.2rem;
+  height: 10.667rem;
+  background: url(./img/headphoto.png)
+    100% no-repeat;
+  background-size: 100% 100%;
+}
+
+.paragraph_1 {
+  width: 6.534rem;
+  height: 4.8rem;
+  overflow-wrap: break-word;
+  color: rgba(255, 255, 255, 1);
+  font-size: 1.6rem;
+  font-family: Helvetica, "Microsoft YaHei", Arial, sans-serif;
+  font-weight: NaN;
+  text-align: left;
+  margin-left:4.267rem;
+  margin-bottom: 3.733rem;
+}
+
+.tongzhigonggaorow_1 {
+  margin-top: 1.06rem;
+  margin-left: 4.266rem;
+}
+
+.zhuanjiatagwrapper {
+  column-gap: 0.106rem;
+}
+
+.image-wrapper_1 {
+  background-color: white;
+  width: 20.933rem;
+  height: 7.546rem;
+  margin-bottom: 0.8rem;
+}
+
+.headphoto_1 {
+  margin-top:0.8rem;
+  margin-left:0.8rem;
+  height: 4.45rem;
+  width: 4.45rem;
+}
+
+.zhuanjianame {
+  font-style: Noto Serif CJK SC;
+  font-weight: 700;
+  font-size: 0.48rem;
+  color: #333333;
+  margin-top: 0.8rem;
+  margin-left: 0.53rem;
+}
+
+.youce_box {
+  /* 新增或修改的样式 */
+  display: flex; /* 确保是 flex 容器 */
+  flex-direction: column; /* 确保子元素垂直排列 */
+  flex-grow: 1; /* 允许它填充剩余空间 */
+  overflow: hidden; /* 防止内部元素溢出 */
+  margin-left: 0.53rem; /* 与 .zhuanjianame 的左边距保持一致 */
+  width: calc(100% - 4.45rem - 0.8rem - 0.8rem); /* 计算剩余宽度：容器总宽 - 头像宽 - 头像左边距 - 右边距(可选) */
+}
+
+.zhuanjiatoulan {
+  display: flex; /* 使用 flex 布局 */
+  justify-content: space-between; /* 两端对齐 */
+  align-items: center; /* 垂直居中 */
+  width: 100%; /* 占满 .youce_box 的宽度 */
+}
+
+.zhuanjianame {
+  font-style: Noto Serif CJK SC;
+  font-weight: 700;
+  font-size: 0.48rem;
+  color: #333333;
+  margin-top: 0.8rem;
+  margin-left: 0;
+  /* 移除 margin-left，由父容器控制 */
+}
+
+.zhuanjiatouxian {
+  font-style: Noto Serif CJK SC;
+  color: #3D3D3D;
+  font-weight: 400;
+  font-size: 0.373rem;
+  margin-top: 0.906rem;
+  line-height: 0.693rem;
+  color: #666666;
+  /* 移除 margin-left，flex布局会自动处理间距 */
+  margin-right: 1.28rem;
+  flex-shrink: 0; /* 防止被压缩 */
+}
+
+
+.zhuanjiatag {
+  background-color: #ECF0FA;
+  flex-direction: row; 
+  flex-wrap: wrap;     
+  width:1.706rem;
+  height: 0.666rem;
+  font-size: 0.32rem;
+  color: #384672;
+  font-family: Source Han Serif CN;
+  font-weight: normal;
+   line-height: normal;
+   letter-spacing: 0em;
+}
+
+.wenzijieshao {
+  font-style: Noto Serif CJK SC;
+  font-weight: 400;
+  font-size: 0.373rem;
+  margin-top: 0.533rem;
+  margin-left: 0;
+  width: 100%; /* 宽度占满父容器 */
+  word-wrap: break-word; /* 允许在单词内换行 */
+  word-break: break-all; /* 对于非 CJK 文本，在任意字符间换行 */
+  white-space: normal;
+}
+
+.bottom-pagination {
+  margin: 1.866rem 0 0 13.64rem;
+  z-index: 50;
+}
+
+.custom-pagination >>> .el-pager li {
+  background-color: white !important; 
+  color: rgba(56, 70, 114, 1) !important;
+  border: none;
+}
+
+.bottom-pagination >>> .el-pager li.active {
+  background-color: rgba(56, 70, 114, 1) !important; 
+  color:white  !important;
+  border: none;
+}
+
+.bottomblank {
+  width: 51.2rem;
+  height: 8.4rem;
+  padding-top:1.6rem;
+}

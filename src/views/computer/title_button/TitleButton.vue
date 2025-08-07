@@ -1,5 +1,6 @@
 <template>
-  <div class="title-button flex-row" >
+ 
+  <div class="title-button">
       <div class="image-contianer_1">
           <a :href="'./shouye'">
         <img :src="require('./assets/img/MasterDDSSlicePNG9e4f0afb7009ff9f61fbd480c98d69ef.png')" class="image_1" />
@@ -29,8 +30,8 @@
             <div class="dropdown_2-title">协会动态</div>
             <ul class="dropdown_2-list">
              <li><a href="/computer/xiehuidongtaitongzhigonggao">通知公告</a></li>     
-             <li><a>要闻动态</a></li> 
-             <li><a>会员动态</a></li>
+             <li><a href="/computer/xiehuidongtaihuiyuandongtai">要闻动态</a></li> 
+             <li><a href="/computer/xiehuidongtaihuiyuandongtai">会员动态</a></li>
             </ul>
           </div>
         </div>
@@ -45,7 +46,7 @@
            <div class="dropdown_3-title">奖项专区</div>
             <ul class="dropdown_3-list">
              <li><a href="/computer/jiangxiangzhuanqufamingchuangyejiang">发明创业奖</a></li>     
-             <li><a>少儿发明奖</a></li> 
+             <li><a href="/computer/jiangxiangzhuanqushaoerfamingjiang">少儿发明奖</a></li> 
             </ul>
            </div>
            </div>
@@ -72,12 +73,18 @@
         </div>
       </div>
       <div class="box_30 flex-col">
-        <div class="text-wrapper_28 flex-col"><span class="text_49">专家库</span></div>
+        <router-link class="text-wrapper_28 flex-col" to="/computer/zhuanjiaku"><span class="text_49">专家库</span></router-link>
       </div>
       <div class="box_31 flex-col">
         <div class="text-wrapper_29 flex-col"><span class="text_50">最新技术推广</span></div>
       </div>
+      <div class="box_34 flex-col">
+        <router-link class="text-wrapper_30 flex-col" to="/computer/lianxiwomen"><span class="text_51">联系我们</span></router-link>
       </div>
+      
+      </div>
+
+
 </template>
 
 
@@ -109,16 +116,10 @@ export default {
   display: flex;
   flex: none;
   width: auto;
-}
+    background-color: rgba(255, 251, 239, 0.8) ;
+    backdrop-filter: blur(3px);
+  -webkit-backdrop-filter: blur(3px);
 
-.block_1 {
-  background-color: rgba(255, 251, 239, 1);
-  width: 51.2rem;
-  height: 5.067rem;
-  position: fixed;
-  top: 0;
-  left: 0;
-  z-index: 1000;
 }
 
 .image_10 {
@@ -131,11 +132,13 @@ export default {
   display: flex;
   flex-direction: column; 
   margin-top: -0.4rem;
-  align-items: center ;
-  justify-content: center ; 
+  align-items: center;
+  justify-content: center; 
+  background-color: transparent !important;
 }
 
 .block_2 {
+
   border-radius: 4px;
   height: 1.227rem;
   border: 1px solid rgba(56, 70, 114, 1);
@@ -143,6 +146,8 @@ export default {
   margin: 3.2rem 0 0 -0.9rem;
   align-items: center;    
   justify-content: center;
+  background-color: transparent
+
 }
 
 /* 按钮背景鼠标悬置效果与文字效果 */
@@ -155,7 +160,8 @@ export default {
 .text-wrapper_26:hover,
 .text-wrapper_27:hover,
 .text-wrapper_28:hover,
-.text-wrapper_29:hover {
+.text-wrapper_29:hover,
+.text-wrapper_30:hover {
   background-color: white;
   border: 1px solid rgba(56, 70, 114, 1);
 }
@@ -169,7 +175,8 @@ export default {
 .text-wrapper_26:hover .text_47,
 .text-wrapper_27:hover .text_48,
 .text-wrapper_28:hover .text_49,
-.text-wrapper_29:hover .text_50 {
+.text-wrapper_29:hover .text_50,
+.text-wrapper_30:hover .text_51 {
   color: rgba(56, 70, 114, 1);
 }
 
@@ -201,6 +208,7 @@ export default {
 }
 
 .section_1 {
+    position: relative;
   border-radius: 4px;
   height: 1.227rem;
   border: 1px solid rgba(56, 70, 114, 1);
@@ -208,6 +216,7 @@ export default {
   margin: 3.2rem 0 0 0.347rem;
   align-items: center;    
   justify-content: center;
+
 }
 
 .text-wrapper_2 {
@@ -221,9 +230,7 @@ export default {
   justify-content: center;
 }
 
-.section_1 {
-  position: relative;
-}
+
 
 .dropdown_1 {
   display: none;
@@ -236,7 +243,7 @@ export default {
   border: 1px solid rgba(204, 204, 204, 1);
   border-radius: 8px;
   width: 6rem;
-  z-index: 100;
+
 }
 
 .text-wrapper_2:hover .dropdown_1 {
@@ -264,6 +271,7 @@ export default {
   flex-wrap: wrap;
   gap: 0.05rem 0.1rem; 
   width: 4rem;
+
 }
 
 .dropdown_1-list li {
@@ -304,7 +312,7 @@ export default {
   border: 1px solid rgba(204, 204, 204, 1);
   border-radius: 8px;
   width: 6rem;
-  z-index: 100;
+
   position: absolute;
   left: 0;
   top: 100%;
@@ -335,6 +343,7 @@ export default {
   flex-wrap: wrap;
   gap: 0.05rem 0.1rem; 
   width: 4rem;
+
 }
 
 .dropdown_2-list li {
@@ -375,7 +384,7 @@ export default {
   border: 1px solid rgba(204, 204, 204, 1);
   border-radius: 8px;
   width: 6.8rem;
-  z-index: 100;
+
   position: absolute;
   left: 0;
   top: 100%;
@@ -406,6 +415,7 @@ export default {
   flex-wrap: wrap;
   gap: 0.05rem 0.1rem; 
   width: 4rem;
+
 }
 
 .dropdown_3-list li {
@@ -446,7 +456,7 @@ export default {
   border: 1px solid rgba(204, 204, 204, 1);
   border-radius: 8px;
   width: 6.8rem;
-  z-index: 100;
+
   position: absolute;
   left: 0;
   top: 100%;
@@ -477,6 +487,7 @@ export default {
   flex-wrap: wrap;
   gap: 0.05rem 0.1rem; 
   width: 4rem;
+  z-index:9999;
 }
 
 .dropdown_4-list li {
@@ -525,6 +536,7 @@ export default {
 }
 
 .section_2 {
+
   border-radius: 4px;
   height: 1.227rem;
   border: 1px solid rgba(56, 70, 114, 1);
@@ -786,6 +798,16 @@ export default {
   justify-content: center;
 }
 
+.box_34 {
+  border-radius: 4px;
+  height: 1.227rem;
+  border: 1px solid rgba(56, 70, 114, 1);
+  width: 3.28rem;
+  margin: 3.2rem 0 0 0.32rem;
+  align-items: center;    
+  justify-content: center;
+}
+
 .text-wrapper_29 {
   background-color: rgba(56, 70, 114, 1);
   border-radius: 2px;
@@ -796,7 +818,32 @@ export default {
   justify-content: center;
 }
 
+.text-wrapper_30 {
+  background-color: rgba(56, 70, 114, 1);
+  border-radius: 2px;
+  height: 1.067rem;
+  width: 3.12rem;
+  margin: 0;
+  align-items: center;     
+  justify-content: center;
+}
+
 .text_50 {
+  width: 2.88rem;
+  height: 0.694rem;
+  overflow-wrap: break-word;
+  color: rgba(255, 255, 255, 1);
+  font-size: 0.48rem;
+  font-family: Source Han Serif CN-Regular;
+  font-weight: NaN;
+  text-align: center;
+  white-space: nowrap;
+  line-height: 0.694rem;
+  margin: 0;
+  text-align: center;
+}
+
+.text_51 {
   width: 2.88rem;
   height: 0.694rem;
   overflow-wrap: break-word;

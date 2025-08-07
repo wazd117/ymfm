@@ -79,7 +79,7 @@
         </div>
       </div>
       <div class="box_30 flex-col">
-        <div class="text-wrapper_28 flex-col"><span class="text_49">专家库</span></div>
+        <router-link class="text-wrapper_28 flex-col" to="/computer/zhuanjiaku"><span class="text_49">专家库</span></router-link>
       </div>
       <div class="box_31 flex-col">
         <div class="text-wrapper_29 flex-col"><span class="text_50">最新技术推广</span></div>
@@ -121,7 +121,7 @@
             <a class="image-text_25 flex-col justify-between" href="http://www.ynfm.com.cn/zh-hans/node/44">
               <a class="block_9 flex-col">
                 <div class="text-wrapper_8 flex-col">
-                  <router-link to="" class="yaowenlink">
+                  <router-link to="/computer/xiehuidongtaiyaowendongtai" class="yaowenlink">
                   <span class="paragraph_3">要闻<br />动态</span>
                   <span class="paragraph_3_hover">→</span>
                 </router-link>
@@ -132,7 +132,7 @@
             <a class="image-text_26 flex-col justify-between" href="http://www.ynfm.com.cn/zh-hans/node/46">
               <div class="group_1 flex-col">
                 <div class="text-wrapper_9 flex-col">
-                <router-link to="" class="huiyuanlink">
+                <router-link to="/computer/xiehuidongtaihuiyuandongtai" class="huiyuanlink">
                   <span class="paragraph_4">会员<br />动态</span>
                   <span class="paragraph_4_hover">→</span>
                 </router-link>
@@ -294,21 +294,21 @@
         <div class="section_6 flex-col">
           <div class="text-wrapper_36 flex-row"><span class="text_36">友情链接</span></div>
           <div class="image-wrapper_3">
-            <a class="zhongguofamingixiehuilink" :href="'https://www.cainet.org.cn/'" target="_blank">
+            <a class="zhongguofamingixiehuilink" :href="'https://www.cainet.org.cn/'">
             <img
               class="image_7"
               referrerpolicy="no-referrer"
               src="./assets/img/MasterDDSSlicePNGb18d287589993e64ebd6fe1390f91706.png"
             /></a>
 
-            <a class="shengwuyiyaolink" :href="'http://bmh.iflora.cn/'" target="_blank">
+            <a class="shengwuyiyaolink" :href="'http://bmh.iflora.cn/'" >
             <img
               class="image_8"
               referrerpolicy="no-referrer"
               src="./assets/img/MasterDDSSlicePNGe086f39daa6c2b8955a5a6bb7d0108ce.png"
             /></a>
             
-            <a class="ynuzhishichanquanlink" :href="'http://www.ip.ynu.edu.cn/'" target="_blank">
+            <a class="ynuzhishichanquanlink" :href="'http://www.ip.ynu.edu.cn/'">
             <img
               class="image_9"
               referrerpolicy="no-referrer"
@@ -354,7 +354,7 @@
         <div class="group_22 flex-row">
           <div class="list_10 flex-row">
             <div class="image-text_30 flex-col justify-between" v-for="(item, index) in loopData1" :key="index">
-              <a :href="item.url" target="_blank">
+              <a :href="item.url">
               <img class="label_1" referrerpolicy="no-referrer" :src="item.lanhuimage0" />
               </a>
               <span class="text-group_8" v-html="item.lanhutext0"></span>

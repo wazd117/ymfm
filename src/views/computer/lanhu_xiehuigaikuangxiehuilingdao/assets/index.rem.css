@@ -61,7 +61,7 @@ html {
   position: fixed;
   width: 100%;
   z-index: 10;
-  background-color: rgba(255, 251, 239, 1);
+
   height: 5.066rem;
 }
 
@@ -690,6 +690,8 @@ html {
   width: 29.867rem;
   height: 8.4rem;
   border: 1px solid rgba(204, 204, 204, 1);
+  border-top:none;
+  border-bottom:none
 }
 
 .text_22 {

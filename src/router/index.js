@@ -11,15 +11,19 @@ import lanhu_huiyuanzhijiadanweihuiyuan from '../views/computer/lanhu_huiyuanzhi
 import lanhu_huiyuanzhijiagerenhuiyuan from '../views/computer/lanhu_huiyuanzhijiagerenhuiyuan/index.vue'
 import lanhu_lianxiwomen_1 from '../views/mobile/lanhu_lianxiwomen_1/index.vue'
 import lanhu_xiehuidongtaitongzhigonggao from '../views/computer/lanhu_xiehuidongtaitongzhigonggao/index.vue'
+import lanhu_xiehuidongtaihuiyuandongtai from '../views/computer/lanhu_xiehuidongtaihuiyuandongtai/index.vue'
+import lanhu_xiehuidongtaiyaowendongtai from '../views/computer/lanhu_xiehuidongtaiyaowendongtai/index.vue'
 import lanhu_xiehuigaikuangxiehuilingdao_1 from '../views/mobile/lanhu_xiehuigaikuangxiehuilingdao_1/index.vue'
 import lanhu_shouye from '../views/computer/lanhu_shouye/index.vue'
 import lanhu_xiehuidongtaitongzhigonggao_1 from '../views/mobile/lanhu_xiehuidongtaitongzhigonggao_1/index.vue'
 import lanhu_jiangxiangzhuanqufamingchuangyejiang from '../views/computer/lanhu_jiangxiangzhuanqufamingchuangyejiang/index.vue'
+import lanhu_jiangxiangzhuanqushaoerfamingjiang from '../views/computer/lanhu_jiangxiangzhuanqushaoerfamingjiang/index.vue'
 import lanhu_huiyuanzhijiagerenhuiyuan_1 from '../views/mobile/lanhu_huiyuanzhijiagerenhuiyuan_1/index.vue'
 import lanhu_huiyuanzhijiadanweihuiyuan_1 from '../views/mobile/lanhu_huiyuanzhijiadanweihuiyuan_1/index.vue'
 import lanhu_jiangxiangzhuanqufamingchuangyejiang_1 from '../views/mobile/lanhu_jiangxiangzhuanqufamingchuangyejiang_1/index.vue'
 import lanhu_xiehuigaikuangxiehuijianjie_1 from '../views/mobile/lanhu_xiehuigaikuangxiehuijianjie_1/index.vue'
 import lanhu_shouye_1 from '../views/mobile/lanhu_shouye_1/index.vue'
+import lanhu_zhuanjiaku from '../views/computer/lanhu_zhuanjiaku/index.vue'
 
 Vue.use(VueRouter)
 
@@ -92,6 +96,21 @@ const routes = [
     component: lanhu_xiehuidongtaitongzhigonggao
   },
   {
+    path: '/computer/xiehuidongtaihuiyuandongtai',
+    name: 'lanhu_xiehuidongtaihuiyuandongtai',
+    component: lanhu_xiehuidongtaihuiyuandongtai
+  },
+  {
+    path: '/computer/xiehuidongtaiyaowendongtai',
+    name: 'lanhu_xiehuidongtaiyaowendongtai',
+    component: lanhu_xiehuidongtaiyaowendongtai
+  },
+  {
+    path: '/computer/zhuanjiaku',
+    name: 'zhuanjiaku',
+    component: lanhu_zhuanjiaku
+  },
+  {
     path: '/mobile/xiehuigaikuangxiehuilingdao',
     name: 'lanhu_xiehuigaikuangxiehuilingdao_1',
     component: lanhu_xiehuigaikuangxiehuilingdao_1
@@ -105,6 +124,11 @@ const routes = [
     path: '/computer/jiangxiangzhuanqufamingchuangyejiang',  
     name: 'lanhu_jiangxiangzhuanqufamingchuangyejiang',
     component: lanhu_jiangxiangzhuanqufamingchuangyejiang
+  },
+ {
+    path: '/computer/jiangxiangzhuanqushaoerfamingjiang',  
+    name: 'lanhu_jiangxiangzhuanqushaoerfamingjiang',
+    component: lanhu_jiangxiangzhuanqushaoerfamingjiang
   },
   {
     path: '/mobile/huiyuanzhijiagerenhuiyuan',
@@ -135,7 +159,8 @@ const routes = [
     path: '/mobile/huiyuanzhijiadanweihuiyuan',
     name: 'lanhu_huiyuanzhijiadanweihuiyuan_1',
     component: lanhu_huiyuanzhijiadanweihuiyuan_1
-  }
+  },
+  
 ]
 
 const router = new VueRouter({

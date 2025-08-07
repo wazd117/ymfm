@@ -3,10 +3,12 @@ html {
 }
 
 .page {
+    margin-top: -5rem;     /* 让内容贴上导航栏背后 */
+  padding-top: 5rem;
   background-color: rgba(248, 246, 239, 1);
   position: relative;
   width: 51.2rem;
-  height: 82.24rem;
+  height: 89.8rem;
   overflow: hidden;
 }
 
@@ -20,8 +22,8 @@ html {
   position: fixed;
   width: 100%;
   z-index: 10;
-  background-color: rgba(255, 251, 239, 1);
   height: 5.066rem;
+
 }
 
 .block_1 {
@@ -346,9 +348,59 @@ html {
   margin: 1.6rem 0 0 4.267rem;
 }
 
+.tongzhigonggaobox_1:hover {
+  background-color: blue;
+}
+
 .image-text_1 {
+  position:relative;
   width: 13.707rem;
-  height: 10.187rem;
+  /* height: 10.187rem; */
+  overflow:hidden;
+  padding-top:75%;
+  cursor: pointer;
+}
+
+.tongzhigonggao_image {
+  position:absolute;
+  top:0;
+  left:0;
+  /* margin-left: -0.4rem; */
+  width: 13.707rem;
+  height: 9.174rem;
+  object-fit:cover;
+  border-radius:8px;
+}
+
+.tongzhigonggao_time {
+  position:absolute;
+  width: 1.867rem;
+  height: 0.48rem;
+  overflow-wrap: break-word;
+  color: rgba(56, 70, 114, 1);
+  font-size: 0.373rem;
+  font-family: Source Han Serif CN-Regular;
+  font-weight: 400;
+  text-align: left;
+  white-space: nowrap;
+  line-height: 0.374rem;
+  bottom: 0.933rem;
+  left: 0;
+}
+
+.tongzhigonggao_title {
+  position:absolute;
+  width: 1.867rem;
+  height: 0.48rem;
+  overflow-wrap: break-word;
+  color: rgba(56, 70, 114, 1);
+  font-size: 0.373rem;
+  font-family: Source Han Serif CN-Regular;
+  font-weight: NaN;
+  text-align: left;
+  white-space: nowrap;
+  line-height: 0.374rem;
+  bottom: 0;
 }
 
 .image_2 {
@@ -861,6 +913,42 @@ html {
   margin-left: 0.827rem;
 }
 
+.tongzhigonggaorow_1 {
+  margin-left: 4.266rem !important;
+  margin-top:1.6rem !important;
+}
+
+.tongzhigonggaobox_1 {
+  border-radius: 16px;
+  width: 13.688rem;
+  height: 11.111rem;
+  cursor: pointer;
+}
+
+.mt {
+  margin-left: 0.8rem;
+}
+
+
+
+.image-text_1 {
+  width: 13.707rem;
+  height: 10.187rem;
+}
+
+.tongzhigongao_title {
+  width: 10.134rem;
+  height: 1.6rem;
+  overflow-wrap: break-word;
+  color: rgba(51, 51, 51, 1);
+  font-size: 0.426rem !important;
+  font-family: Source Han Serif CN-Medium;
+  font-weight: 500 !important;
+  text-align: left;
+  line-height: 0.534rem;
+  margin: 0.267rem 0 0 0.507rem;
+}
+
 .box_6 {
   width: 13.92rem;
   height: 0.854rem;
@@ -1113,6 +1201,24 @@ html {
   margin: 0.134rem 0 0 0.214rem;
 }
 
+.bottom-pagination {
+  margin: 1.866rem 0 0 13.64rem;
+  z-index: 50;
+}
+
+.custom-pagination >>> .el-pager li {
+  background-color: white !important; 
+  color: rgba(56, 70, 114, 1) !important;
+  border: none;
+}
+
+.bottom-pagination >>> .el-pager li.active {
+  background-color: rgba(56, 70, 114, 1) !important; 
+  color:white  !important;
+  border: none;
+}
+
+
 .box_7 {
   width: 51.2rem;
   height: 8.4rem;
@@ -1261,7 +1367,7 @@ html {
 }
 
 .text-wrapper_20:hover {
-  background-color: rgba(56, 70, 114, 1);
+  background-color: white;
 }
 
 .text-wrapper_20:hover .text_35 {
@@ -1288,4 +1394,10 @@ html {
   white-space: nowrap;
   line-height: 0.534rem;
   margin: 1.067rem 0 0 20.454rem;
+}
+
+.bottomblank {
+  width: 51.2rem;
+  height: 8.4rem;
+  margin: -6rem 0 0.027rem 0;
 }

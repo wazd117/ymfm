@@ -48,7 +48,7 @@ html {
   position: fixed;
   width: 100%;
   z-index: 10;
-  background-color: rgba(255, 251, 239, 1);
+
   height: 5.066rem;
 }
 
@@ -595,6 +595,12 @@ html {
   width: 51.2rem;
   height: 8.4rem;
   margin: 1.6rem 0 0.021rem 0;
+}
+
+.bottomblank {
+  width: 51.2rem;
+  height: 8.4rem;
+  margin: 1.6rem 0 0.027rem 0;
 }
 
 .section_1 {

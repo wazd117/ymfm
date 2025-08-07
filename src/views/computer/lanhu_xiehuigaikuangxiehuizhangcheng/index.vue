@@ -393,7 +393,7 @@
           </div>
         </div>
       </div>
-      <div class="box_7 flex-col justify-between">
+      <!-- <div class="box_7 flex-col justify-between">
        <div class="text-wrapper_12 flex-row">
         <div class="block_3 flex-col">
           <span class="text_14">友情链接</span>
@@ -447,6 +447,10 @@
         <div class="text-wrapper_11 flex-col">
           <span class="text_19">版权所有：Copyright&nbsp;©&nbsp;云南省发明协会&nbsp;All&nbsp;rights&nbsp;reserved.</span>
         </div>
+      </div> -->
+     
+      <div class="bottomblank">
+        <BottomBlank />
       </div>
     </div>
   </div>
@@ -455,9 +459,11 @@
 <script>
 
 import TitleButton from '../title_button/TitleButton.vue';
+import BottomBlank from '../bottom_blank/BottomBlank.vue';
 export default {
   components: {
-    TitleButton 
+    TitleButton, 
+    BottomBlank,
   },
   data() {
     return {

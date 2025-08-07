@@ -1,5 +1,6 @@
 <template>
   <div class="page flex-col">
+
     <div class="group_1 flex-row">
       <div class="titlebutton">
         <TitleButton />
@@ -51,11 +52,11 @@
         </span>
         <div class="text-wrapper_7 flex-row">
           <span class="text_9">通知公告</span>
-          <span class="text_10">要闻动态</span>
-          <span class="text_11">会员动态</span>
+          <router-link class="text_10" to="/computer/xiehuidongtaiyaowendongtai">要闻动态</router-link>
+          <router-link class="text_11" to="/computer/xiehuidongtaihuiyuandongtai">会员动态</router-link>
         </div>
       </div>
-      <div class="box_2 flex-row justify-between">
+      <!-- <div class="box_2 flex-row justify-between">
         <div class="image-text_1 flex-col justify-between">
           <img
             class="image_2"
@@ -177,7 +178,7 @@
             referrerpolicy="no-referrer"
             src="./assets/img/MasterDDSSlicePNG78716aa99165448ee0d8d3d6027ef329.png"
           />
-          <span class="text-group_12">203-03-14</span>
+          <span class="text-group_12">2023-03-14</span>
         </div>
       </div>
       <div class="text-wrapper_11 flex-row justify-between">
@@ -187,8 +188,32 @@
         </span>
         <span class="text_19">中国发明协会关于2023年度“发明创业奖”评选工作的通知</span>
         <span class="text_20">云南省发明协会入围作品答辩培训及终评颁奖通知</span>
-      </div>
-      <div class="box_6 flex-row">
+      </div> -->
+
+      <div class="tongzhigonggaorow_1" 
+      v-for="(row, rowIndex) in groupedList" 
+      :key="rowIndex" 
+      :style="{ marginTop: getVerticalOffset(rowIndex) }">
+      <el-row :gutter="20">
+       
+       <el-col 
+           v-for="(item, index) in row"
+          :key="index"
+          :span="8"
+          class="[tongzhigonggaobox_1,{mt:index >= 1}]"
+         >
+
+            <div class="image-text_1 flex-col justify-start">
+              <img class="tongzhigonggao_image" referrerpolicy="no-referrer" :src="item.imgSrc" />
+              <div class="tongzhigonggao_time">{{item.time}}</div>
+            </div>
+            <div class="tongzhigonggao_title flex-col">{{ item.title }}</div>
+
+       </el-col>
+     </el-row>
+   </div>
+
+      <!-- <div class="box_6 flex-row">
         <div class="image-wrapper_1 flex-col">
           <img
             class="thumbnail_1"
@@ -218,8 +243,18 @@
         <span class="text_28">前往</span>
         <div class="text-wrapper_19 flex-col"><span class="text_29">2</span></div>
         <span class="text_30">页</span>
-      </div>
-      <div class="box_7 flex-row justify-between">
+      </div> -->
+     
+      <el-pagination
+        background
+        size="small"
+        :page-size="20"
+        :pager-count="11"
+         class="bottom-pagination"
+         layout="prev, pager, next,jumper"
+        :total="300"
+       />
+      <!-- <div class="box_7 flex-row justify-between">
         <div class="group_7 flex-col">
           <span class="text_31">友情链接</span>
           <div class="image-wrapper">
@@ -269,26 +304,112 @@
             <a class="text-wrapper_20 flex-col" :href="'/computer/lianxiwomen'" target="_blank"><span class="text_35">联系我们&nbsp;→</span></a>
           </div>
         </div>
-      </div>
+      </div> -->
     </div>
-    <div class="text-wrapper_21 flex-col">
+    <!-- <div class="text-wrapper_21 flex-col">
       <span class="text_36">版权所有：Copyright&nbsp;©&nbsp;云南省发明协会&nbsp;All&nbsp;rights&nbsp;reserved.</span>
+    </div> -->
+    <div class="bottomblank">
+      <BottomBlank />
     </div>
-  </div>
+ </div>
 </template>
 <script>
 
+import BottomBlank from '../bottom_blank/BottomBlank.vue';
 import TitleButton from '../title_button/TitleButton.vue';
 export default {
   components: {
-    TitleButton
+    TitleButton,
+    BottomBlank,
   },
   data() {
     return {
+      tongzhigonggaoList: [
+        {
+          imgSrc: require('@/views/computer/lanhu_xiehuidongtaitongzhigonggao/assets/img/MasterDDSSlicePNGe7cfbbbf3db36de264772a5d846c3b92.png'),
+          time:'2025-02-17',
+          title: '关于举办第 20 届宋庆龄少年儿童发明奖的通知',
+        },
+        {
+          imgSrc:require('@/views/computer/lanhu_xiehuidongtaitongzhigonggao/assets/img/MasterDDSSlicePNGb6749eaad4c0f2e30051a8dece9f67fe.png'),
+          time:'2025-03-16',
+          title: '关于举办云南省第十九届宋庆龄少年儿童发明奖 评奖活动通知',
+        },
+        {
+          imgSrc:require('@/views/computer/lanhu_xiehuidongtaitongzhigonggao/assets/img/MasterDDSSlicePNG78716aa99165448ee0d8d3d6027ef329.png'),
+          time:'2025-03-04',
+          title: '中国宋庆龄基金会、中国发明协会 关于举办第十九届宋庆龄少年儿童发明奖的通知',
+        },
+        {
+          imgSrc: require('@/views/computer/lanhu_xiehuidongtaitongzhigonggao/assets/img/MasterDDSSlicePNGe7cfbbbf3db36de264772a5d846c3b92.png'),
+          time:'2025-02-17',
+          title: '关于举办第 20 届宋庆龄少年儿童发明奖的通知',
+        },
+        {
+          imgSrc:require('@/views/computer/lanhu_xiehuidongtaitongzhigonggao/assets/img/MasterDDSSlicePNGb6749eaad4c0f2e30051a8dece9f67fe.png'),
+          time:'2025-03-16',
+          title: '关于举办云南省第十九届宋庆龄少年儿童发明奖 评奖活动通知',
+        },
+        {
+          imgSrc:require('@/views/computer/lanhu_xiehuidongtaitongzhigonggao/assets/img/MasterDDSSlicePNG78716aa99165448ee0d8d3d6027ef329.png'),
+          time:'2025-03-04',
+          title: '中国宋庆龄基金会、中国发明协会 关于举办第十九届宋庆龄少年儿童发明奖的通知',
+        },
+        {
+          imgSrc: require('@/views/computer/lanhu_xiehuidongtaitongzhigonggao/assets/img/MasterDDSSlicePNGe7cfbbbf3db36de264772a5d846c3b92.png'),
+          time:'2025-02-17',
+          title: '关于举办第 20 届宋庆龄少年儿童发明奖的通知',
+        },
+        {
+          imgSrc:require('@/views/computer/lanhu_xiehuidongtaitongzhigonggao/assets/img/MasterDDSSlicePNGb6749eaad4c0f2e30051a8dece9f67fe.png'),
+          time:'2025-03-16',
+          title: '关于举办云南省第十九届宋庆龄少年儿童发明奖 评奖活动通知',
+        },
+        {
+          imgSrc:require('@/views/computer/lanhu_xiehuidongtaitongzhigonggao/assets/img/MasterDDSSlicePNG78716aa99165448ee0d8d3d6027ef329.png'),
+          time:'2025-03-04',
+          title: '中国宋庆龄基金会、中国发明协会 关于举办第十九届宋庆龄少年儿童发明奖的通知',
+        },
+        {
+          imgSrc: require('@/views/computer/lanhu_xiehuidongtaitongzhigonggao/assets/img/MasterDDSSlicePNGe7cfbbbf3db36de264772a5d846c3b92.png'),
+          time:'2025-02-17',
+          title: '关于举办第 20 届宋庆龄少年儿童发明奖的通知',
+        },
+        {
+          imgSrc:require('@/views/computer/lanhu_xiehuidongtaitongzhigonggao/assets/img/MasterDDSSlicePNGb6749eaad4c0f2e30051a8dece9f67fe.png'),
+          time:'2025-03-16',
+          title: '关于举办云南省第十九届宋庆龄少年儿童发明奖 评奖活动通知',
+        },
+        {
+          imgSrc:require('@/views/computer/lanhu_xiehuidongtaitongzhigonggao/assets/img/MasterDDSSlicePNG78716aa99165448ee0d8d3d6027ef329.png'),
+          time:'2025-03-04',
+          title: '中国宋庆龄基金会、中国发明协会 关于举办第十九届宋庆龄少年儿童发明奖的通知',
+        },
+        
+
+        ],
       constants: {}
     };
   },
-  methods: {}
+
+  computed: {
+  groupedList() {
+    const list = this.tongzhigonggaoList
+    const result = []
+    for (let i = 0; i < list.length; i += 3) {
+      result.push(list.slice(i, i + 3))
+    }
+    return result
+  }
+},
+
+  methods: {
+    getVerticalOffset(index) {
+    const offsets = ['14.05rem', '27.01rem', '40rem']
+    return offsets[index] || '0rem'
+  }
+  }
 };
 </script>
 <style scoped lang="css" src="./assets/index.rem.css" />

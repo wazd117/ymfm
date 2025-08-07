@@ -1,6 +1,5 @@
 <template>
   <div class="page flex-col">
-
       <div class="text-container_1 flex-col">
         <div class="text-container_2 flex-row justify-between align-center">
           <div class="text-with-image flex-row align-center"></div>
@@ -279,10 +278,12 @@
 
 import TitleButton from '../title_button/TitleButton.vue';
 
+
 export default {
 
     components: {
     TitleButton,
+
   },
   data() {
     return {

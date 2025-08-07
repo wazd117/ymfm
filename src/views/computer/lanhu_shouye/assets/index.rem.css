@@ -10,8 +10,11 @@ html {
   overflow: hidden;
 }
 
+
 .block_1 {
-  background-color: rgba(255, 251, 239, 1);
+  background-color: rgba(255, 251, 239, 0.8);
+      backdrop-filter: blur(3px);
+  -webkit-backdrop-filter: blur(3px);
   width: 51.2rem;
   height: 5.067rem;
   position: fixed;
@@ -1608,6 +1611,7 @@ html {
   height: 6.507rem;
   border: 1px solid rgba(204, 204, 204, 1);
   width: 51.2rem;
+  border-top: none;
 }
 
 .box_10 {
@@ -1673,6 +1677,8 @@ html {
   height: 8.4rem;
   border: 1px solid rgba(204, 204, 204, 1);
   width: 29.867rem;
+  border-top:none;
+  border-bottom: none;
 }
 
 .text-wrapper_36 {
@@ -1980,6 +1986,9 @@ html {
   border: 1px solid rgba(204, 204, 204, 1);
   margin-top: -0.026rem;
   width: 51.2rem;
+  border-bottom: none;
+  border-right: none;
+  border-left: none;
 }
 
 .text_45 {
