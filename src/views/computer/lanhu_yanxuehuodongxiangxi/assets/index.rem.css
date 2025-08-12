@@ -1,0 +1,357 @@
+html {
+    font-size: 37.5px;
+}
+
+.page {
+  background-color: rgba(246, 243, 223, 1);
+  position: relative;
+  max-width: 51.2rem;
+  height: auto;
+  
+}
+
+.titlebutton {
+  position: fixed;
+  width: 100%;
+  z-index: 10;
+  height: 5.066rem;
+}
+
+.section_1 { 
+  width: 51.2rem;
+  height: 10.667rem;
+  background: url(./img/headphoto.png)
+    100% no-repeat;
+  background-size: 100% 100%;
+}
+
+.paragraph_1 {
+  width: 6.534rem;
+  height: 4.8rem;
+  overflow-wrap: break-word;
+  color: rgba(255, 255, 255, 1);
+  font-size: 1.6rem;
+  font-family: Helvetica, "Microsoft YaHei", Arial, sans-serif;
+  font-weight: NaN;
+  text-align: left;
+  margin-left:4.267rem;
+  margin-top: 2.133rem;
+}
+
+.box_1 {
+  margin-top: 5.45rem;
+  position: relative;
+  width: 51.2rem;
+}
+
+.headblank {
+  background-image: linear-gradient(
+    360deg,
+    rgba(53, 73, 136, 0.8) 0,
+    rgba(64, 88, 162, 0.5) 100%
+  );
+  width: 51.2rem;
+  height: 1.6rem;
+  margin-top: 2.134rem;
+}
+
+.shouyefanhui {
+  margin-left: 4.266rem;
+  margin-top:0.52rem;
+
+font-family: Source Han Serif CN;
+font-size: 0.4266rem;
+font-weight: normal;
+line-height: 125%;
+letter-spacing: 0em;
+
+font-variation-settings: "opsz" auto;
+font-feature-settings: "kern" on;
+  color: #FFFFFF;
+}
+
+.yanxuehuodongfanhui {
+  margin-left: 0.01rem;
+  margin-top:0.52rem;
+font-family: Source Han Serif CN;
+font-size: 0.4266rem;
+font-weight: normal;
+line-height: 125%;
+letter-spacing: 0em;
+font-variation-settings: "opsz" auto;
+font-feature-settings: "kern" on;
+  color: #FFFFFF;
+}
+
+.xiangxi {
+  margin-left: 0.01rem;
+  margin-top:0.52rem;
+
+font-family: Source Han Serif CN;
+font-size: 0.4266rem;
+font-weight: normal;
+line-height: 125%;
+letter-spacing: 0em;
+
+font-variation-settings: "opsz" auto;
+font-feature-settings: "kern" on;
+  color: #FFFFFF;
+}
+
+.box_2 {
+position: absolute;
+left: 4.28rem;
+top: 16.8rem;
+width: 42.653rem;
+height: 2.586rem;
+opacity: 1;
+
+/* 自动布局 */
+display: flex;
+flex-direction: column;
+align-items: center;
+padding: 0px;
+gap: 0.533rem;
+}
+
+.huodongjinajiebox {
+  position: absolute;
+  width:32.8rem;
+  height: auto;
+  background-color: white;
+  margin-left:4.266rem;
+  margin-top:1.066rem;
+  
+}
+
+.huodongjianjietitle {
+  padding-left: 0.533rem;
+  padding-top: 0.533rem;
+  font-family: Source Han Serif CN;
+font-size: 0.48rem;
+font-weight: bold;
+line-height: 0.746rem;
+letter-spacing: 0px;
+font-variation-settings: "opsz" auto;
+font-feature-settings: "kern" on;
+color: #3D3D3D;
+z-index: 0;
+}
+
+.huodongjianjiecontent {
+  padding-left: 0.533rem;
+  padding-top:1.813rem;
+  padding-bottom:0.533rem;
+  overflow-wrap: break-word;
+  font-family: Source Han Serif CN;
+font-size: 0.3733rem;
+font-weight: normal;
+line-height: normal;
+letter-spacing: 0px;
+font-variation-settings: "opsz" auto;
+font-feature-settings: "kern" on;
+color: #666666;
+z-index: 1;
+}
+
+.xingchenganpaibox {
+  position:absolute;
+  top:10.28rem;
+  left:4.266rem;
+  width:32.8rem;
+  height: auto;
+  background-color: white;
+  border-radius: 0.213rem;
+  opacity: 1;
+}
+
+.xingchenganpaititle {
+  padding-left:0.533rem;
+  padding-top:0.533rem;
+  font-family: Source Han Serif CN;
+  font-size: 0.48rem;
+  font-weight: bold;
+  line-height: 28px;
+  letter-spacing: 0px;
+  font-variation-settings: "opsz" auto;
+  font-feature-settings: "kern" on;
+  color: #3D3D3D;
+}
+
+.itinerary-item {
+  display: flex; /* 让左边的装饰和右边的文字并排 */
+  position: relative; /* 作为内部绝对定位元素的参考 */
+  padding-bottom: 1.5rem; /* 每个项目之间的垂直间距 */
+}
+
+/* 3. 左侧时间线装饰的容器 */
+.timeline-visuals {
+  position: relative;
+  width: 1rem; /* 装饰区域的宽度 */
+  flex-shrink: 0; /* 防止被压缩 */
+}
+
+/* 4. 时间线上的圆点 */
+.timeline-dot {
+  position: absolute;
+  top: 1.84rem;  /* 根据需要微调，使其与文字对齐 */
+  left: 1.69rem;
+  width: 0.4rem;  /* 圆点的直径 */
+  height: 0.4rem; /* 圆点的直径 */
+  background-color: #E4E7ED; /* 你指定的颜色 */
+  border-radius: 50%; /* 变成圆形 */
+  z-index: 2; /* 让它在竖线之上 */
+}
+
+
+
+/* 6. 右侧文字内容的容器 */
+.timeline-content {
+  margin-top: 1.84rem;
+  margin-left: 1.82rem; /* 文字区域和左边时间线的间距 */
+  border-left: 0.053rem solid #E4E7ED; /* 左边的装饰线 */
+  background-color: #F9FAFB;
+}
+
+/* 7. 分别定义“天数”、“标题”、“内容”的样式 */
+.item-day {
+  font-family: Source Han Serif CN;
+  font-size: 0.426rem;
+  font-weight:400;
+  color: #999999;
+  padding-top: 0;
+  padding-left: 0.66rem;
+  padding-top: 1.14rem;
+}
+
+.item-title {
+  font-family: Source Han Serif CN;
+font-size: 0.373rem;
+font-weight: bold;
+line-height: 0.56rem;
+letter-spacing: 0rem;
+
+font-variation-settings: "opsz" auto;
+font-feature-settings: "kern" on;
+
+  color: #3D3D3D;
+  padding-left:1.2rem;
+  padding-top:1.16rem;
+}
+
+.item-content {
+  font-family: Source Han Serif CN;
+  font-size: 0.32rem;
+  font-weight: normal;
+  color: #888888;
+  line-height: 1.5; /* 增加行高，让内容更易读 */
+}
+
+.item-content1 {
+   font-family: Source Han Serif CN;
+font-size: 14px;
+font-weight: normal;
+line-height: 21px;
+letter-spacing: 0px;
+  padding-left:1.2rem;
+  padding-top:0.266rem;
+font-variation-settings: "opsz" auto;
+font-feature-settings: "kern" on;
+color: #3D3D3D;
+}
+
+.item-subtitle {
+  padding-left:1.066rem;
+  padding-top: 1.653rem;
+  font-family: Source Han Serif CN;
+font-size: 0.373rem;
+font-weight: normal;
+line-height: 0.56rem;
+letter-spacing: 0rem;
+
+font-variation-settings: "opsz" auto;
+font-feature-settings: "kern" on;
+color: #3D3D3D;
+}
+
+.item-text {
+  padding-left:0.5rem;
+  padding-top: 1.653rem;
+  font-family: Source Han Serif CN;
+font-size: 0.373rem;
+font-weight: normal;
+line-height: 0.56rem;
+letter-spacing: 0rem;
+
+font-variation-settings: "opsz" auto;
+font-feature-settings: "kern" on;
+color: #3D3D3D;
+}
+
+.zhuanjianame {
+position: static;
+left: 12.726rem;
+top: 0rem;
+width: 17.2rem;
+height: 1.2rem;
+height: 0.906rem;
+opacity: 1;
+font-family: Source Han Serif CN;
+font-size: 0.64rem;
+font-weight: bold;
+line-height: normal;
+text-align: center;
+letter-spacing: 0rem;
+font-variation-settings: "opsz" auto;
+font-feature-settings: "kern" on;
+/* 333 */
+color: #333333;
+}
+
+.time {
+position: static;
+margin-bottom: 0.533rem;
+margin-left:18.26rem;
+width: 19.893rem;
+height: 0.533rem;
+opacity: 1;
+
+font-family: Source Han Serif CN;
+font-size: 0.373rem;
+font-weight: normal;
+line-height: normal;
+letter-spacing: 0em;
+
+font-variation-settings: "opsz" auto;
+font-feature-settings: "kern" on;
+/* 999 */
+color: #999999;
+
+z-index: 1;}
+
+.box_3 {
+    margin-top: 3.3rem;
+    margin-left: 4.2933rem;
+    width: 42.653rem;
+}
+
+.zhanwei {
+  height: 57rem; 
+}
+
+.feiyongshuomingbox {
+  position:absolute;
+  top:30.506rem;
+  left:4.266rem;
+  width:32.8rem;
+  height: auto;
+  background-color: white;
+  border-radius: 8px;
+  opacity: 1;
+}
+
+.bottomblank {
+  width: 51.2rem;
+  height: 8.4rem;
+  padding-bottom:0rem;
+}

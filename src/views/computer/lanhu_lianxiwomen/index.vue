@@ -100,7 +100,7 @@
           src="./assets/img/MasterDDSSlicePNG5d951be681ff162c0ec31b2af0c222f2.png"
         />
       </div>
-      <div class="box_5 flex-row justify-between">
+      <!-- <div class="box_5 flex-row justify-between">
         <div class="group_9 flex-col">
           <a class="text-wrapper">
           <span class="text_20">友情链接</span>
@@ -157,7 +157,10 @@
             <a class="text-wrapper_14 flex-col" :href="'/computer/lianxiwomen'"><span class="text_24">联系我们&nbsp;→</span></a>
           </div>
         </div>
-      </div>
+      </div> -->
+      <div class="bottomblank">
+      <BottomBlank />
+    </div>
     </div>
 
   </div>
@@ -166,9 +169,11 @@
 <script>
 
 import TitleButton from '../title_button/TitleButton.vue';
+import BottomBlank from '../bottom_blank/BottomBlank.vue';
 export default {
     components: {
     TitleButton,
+    BottomBlank,
   },
   data() {
     return {

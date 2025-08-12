@@ -728,3 +728,9 @@ html {
   line-height: 0.534rem;
   margin: 1.067rem 0 0 20.454rem;
 }
+
+.bottomblank {
+  width: 51.2rem;
+  height: 8.4rem;
+  padding-top:1.6rem;
+}

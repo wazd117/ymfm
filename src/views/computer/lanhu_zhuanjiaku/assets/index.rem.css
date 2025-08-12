@@ -7,14 +7,13 @@ html {
   position: relative;
   max-width: 51.2rem;
   height: 74.5rem;
-  
   overflow: hidden;
 }
 
 .titlebutton {
   position: fixed;
   width: 100%;
-  z-index: 10;
+  z-index: 100;
   height: 5.066rem;
 }
 
@@ -52,6 +51,7 @@ html {
 }
 
 .zhuanjiatagwrapper {
+  margin-top:0.533rem;
   column-gap: 0.106rem;
 }
 
@@ -123,7 +123,7 @@ html {
   background-color: #ECF0FA;
   flex-direction: row; 
   flex-wrap: wrap;     
-  width:1.706rem;
+  display: inline-block;
   height: 0.666rem;
   font-size: 0.32rem;
   color: #384672;
@@ -143,11 +143,141 @@ html {
   word-wrap: break-word; /* 允许在单词内换行 */
   word-break: break-all; /* 对于非 CJK 文本，在任意字符间换行 */
   white-space: normal;
+  line-height: 0.6933rem;
+  color:#666666;
+    overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 2; /* 限制为 2 行 */
+  -webkit-box-orient: vertical;
+}
+
+.chakanxiangxi {
+  background-color: rgba(56, 70, 114, 1);
+  border-radius: 0.1066rem;
+  height: 1.067rem;
+  margin-left:11.306rem;
+  margin-top:1.066rem;
+  width: 3.04rem;
+  margin-top: auto; /* 自动推到底部 */
+
+  margin-bottom: 0.8rem; /* 增加一点下边距，避免贴底 */
+  margin-right: 0.8rem;
+    cursor: pointer;
+    align-items: center;
+  justify-content: center;
+}
+
+.chakanxiangxi:hover{
+  background-color: white;
+}
+
+.chakanxiangxi:hover .ckxx{
+color: rgba(56, 70, 114, 1);
+}
+
+.ckxx {
+  width: 1.974rem;
+  height: 0.534rem;
+  overflow-wrap: break-word;
+  color: rgba(255, 255, 255, 1);
+  font-size: 0.373rem;
+  font-family: Source Han Serif CN-Regular;
+  font-weight: NaN;
+  text-align: left;
+  white-space: nowrap;
+  line-height: 0.534rem;
+  align-items: center;
+  justify-content: center;
 }
 
 .bottom-pagination {
   margin: 1.866rem 0 0 13.64rem;
   z-index: 50;
+}
+
+.dialog-title-wrapper {
+  margin-left: 0.533rem;
+}
+
+.dialog-title {
+  font-family: Source Han Serif CN;
+font-size: 0.373rem;
+font-weight: normal;
+line-height: 125%;
+text-align: right;
+letter-spacing: 0em;
+font-variation-settings: "opsz" auto;
+font-feature-settings: "kern" on;
+color: #3D3D3D;
+white-space: nowrap;
+z-index: 1;
+}
+
+
+.dialog-tags {
+  display: flex;
+    column-gap: 0.266rem;
+    margin-top: 0.533rem;
+}
+
+.expert-dialog >>> .el-dialog__body {
+
+  padding: 1rem; /* 建议给内容区一些内边距 */
+  box-sizing: border-box; /* 让 padding 不会增加总高度 */
+  
+}
+
+.dialog-headphoto {
+  width:2.346rem;
+  height:2.346rem;
+}
+
+.dialog-name {
+  position: static;
+left: 0rem;
+top: 0rem;
+width: 0.96rem;
+height: 0.693rem;
+opacity: 1;
+font-family: Source Han Serif CN;
+font-size: 0.48rem;
+font-weight: bold;
+line-height: normal;
+letter-spacing: 0rem;
+font-variation-settings: "opsz" auto;
+font-feature-settings: "kern" on;
+color: #333333;
+z-index: 0;
+}
+
+.dialog-title {
+ font-family: Source Han Serif CN;
+font-size: 0.373rem;
+font-weight: normal;
+line-height: 125%;
+text-align: right;
+letter-spacing: 0em;
+position: static;
+margin-left: 14.17rem;
+width: 0.745rem;
+height: 0.48rem;
+}
+
+.dialog-tag-item {
+  background: #ECF0FA;
+  width:1.706rem;
+  height: 0.666rem;
+  font-family: Source Han Serif CN;
+font-size: 0.32rem;
+font-weight: normal;
+line-height: normal;
+letter-spacing: 0em;
+
+font-variation-settings: "opsz" auto;
+font-feature-settings: "kern" on;
+/* 主题色 */
+color: #384672;
 }
 
 .custom-pagination >>> .el-pager li {
@@ -160,6 +290,63 @@ html {
   background-color: rgba(56, 70, 114, 1) !important; 
   color:white  !important;
   border: none;
+}
+
+.gerenjianjie {
+  position: static;
+left: 0rem;
+top: 0rem;
+width: 1.706rem;
+height: 0.613rem;
+opacity: 1;
+
+  font-family: Source Han Serif CN;
+font-size: 0.426rem;
+font-weight: bold;
+line-height: normal;
+letter-spacing: 0rem;
+color: #333333;
+}
+
+.dialog-intro {
+  margin-top: 0.266rem !important;
+}
+
+.yanjiuchengguotitle {
+  margin-top:0.533rem;
+  width: 1.706rem;
+height: 0.613rem;
+  font-family: Source Han Serif CN;
+font-size: 0.426rem;
+font-weight: bold;
+line-height: normal;
+letter-spacing: 0rem;
+
+font-variation-settings: "opsz" auto;
+font-feature-settings: "kern" on;
+/* 333 */
+color: #333333;
+
+z-index: 0;
+}
+
+.yanjiuchengguo {
+  position: static;
+
+opacity: 1;
+
+font-family: Source Han Serif CN;
+
+font-weight: normal;
+
+letter-spacing: 0rem;
+
+font-variation-settings: "opsz" auto;
+font-feature-settings: "kern" on;
+/* 666 */
+color: #666666;
+
+z-index: 1;
 }
 
 .bottomblank {

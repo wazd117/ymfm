@@ -69,7 +69,7 @@
           <div class="text-wrapper_16 flex-col"><span class="text_20" v-html="item.lanhutext8"></span></div>
         </div>
       </div>
-      <div class="block_2 flex-row justify-between">
+      <!-- <div class="block_2 flex-row justify-between">
         <div class="section_1 flex-col">
         <span class="text_21">友情链接</span>
         <div class="image-wrapper">
@@ -123,15 +123,21 @@
     </div>
     <div class="text-wrapper_18 flex-col">
       <span class="text_26">版权所有：Copyright&nbsp;©&nbsp;云南省发明协会&nbsp;All&nbsp;rights&nbsp;reserved.</span>
+    </div> -->
+       <div class="bottomblank">
+      <BottomBlank />
+    </div>
     </div>
   </div>
 </template>
 <script>
 
 import TitleButton from "../title_button/TitleButton";
+import BottomBlank from '../bottom_blank/BottomBlank.vue';
 export default {
   components: {
-    TitleButton
+    TitleButton,
+    BottomBlank,
   },
   data() {
     return {

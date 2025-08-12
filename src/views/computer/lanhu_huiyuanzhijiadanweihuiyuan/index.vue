@@ -144,7 +144,7 @@
         referrerpolicy="no-referrer"
         src="./assets/img/MasterDDSSlicePNGd30c9339d9636bfe99f7f963d8289a54.png"
       />
-      <div class="group_5 flex-row justify-between">
+      <!-- <div class="group_5 flex-row justify-between">
         <div class="group_6 flex-col">
           <span class="text_14">友情链接</span>
         <a class="image-wrapper">
@@ -200,15 +200,21 @@
     </div>
     <div class="text-wrapper_10 flex-col">
       <span class="text_19">版权所有：Copyright&nbsp;©&nbsp;云南省发明协会&nbsp;All&nbsp;rights&nbsp;reserved.</span>
+    </div> -->
+       <div class="bottomblank">
+      <BottomBlank />
     </div>
-  </div>
+    </div>
+ </div>
 </template>
 <script>
 
 import TitleButton from "../title_button/TitleButton";
+import BottomBlank from '../bottom_blank/BottomBlank.vue';
 export default {
   components: {
-    TitleButton
+    TitleButton,
+    BottomBlank,
   },
   data() {
     return {

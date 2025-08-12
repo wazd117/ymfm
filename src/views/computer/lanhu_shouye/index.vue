@@ -36,8 +36,8 @@
             <div class="dropdown_2-title">协会动态</div>
             <ul class="dropdown_2-list">
              <li><a href="/computer/xiehuidongtaitongzhigonggao">通知公告</a></li>     
-             <li><a>要闻动态</a></li> 
-             <li><a>会员动态</a></li>
+             <li><a href="/computer/xiehuidongtaiyaowendongtai">要闻动态</a></li> 
+             <li><a href="/computer/xiehuidongtaihuiyuandongtai">会员动态</a></li>
             </ul>
           </div>
         </div>
@@ -52,7 +52,7 @@
            <div class="dropdown_3-title">奖项专区</div>
             <ul class="dropdown_3-list">
              <li><a href="/computer/jiangxiangzhuanqufamingchuangyejiang">发明创业奖</a></li>     
-             <li><a>少儿发明奖</a></li> 
+             <li><a href="/computer/jiangxiangzhuanqushaoerfamingjiang">少儿发明奖</a></li> 
             </ul>
            </div>
            </div>
@@ -62,7 +62,7 @@
              <div class="dropdown_4">
               <div class="dropdown_4-title">会员之家</div>
               <ul class="dropdown_4-list">
-              <li><a>入会申请</a></li>     
+              <li><a href="/computer/ruhuishenqing">入会申请</a></li>     
               <li><a>       </a></li>
               <li><a href="/computer/huiyuanzhijiadanweihuiyuan">单位会员</a></li>    
               <li><a href="/computer/huiyuanzhijiagerenhuiyuan">个人会员</a></li>
@@ -71,10 +71,10 @@
             </div>
           </div>
           <div class="group_8 flex-col">
-            <div class="text-wrapper_26 flex-col"><span class="text_47">研学活动</span></div>
+            <router-link class="text-wrapper_26 flex-col" to="/computer/yanxuehuodong"><span class="text_47">研学活动</span></router-link>
           </div>
           <div class="group_9 flex-col">
-            <div class="text-wrapper_27 flex-col"><span class="text_48">项目库</span></div>
+            <router-link class="text-wrapper_27 flex-col" to="/computer/xiangmuku"><span class="text_48">项目库</span></router-link>
           </div>
         </div>
       </div>
@@ -82,7 +82,7 @@
         <router-link class="text-wrapper_28 flex-col" to="/computer/zhuanjiaku"><span class="text_49">专家库</span></router-link>
       </div>
       <div class="box_31 flex-col">
-        <div class="text-wrapper_29 flex-col"><span class="text_50">最新技术推广</span></div>
+        <router-link class="text-wrapper_29 flex-col" to="/computer/zuixinjishutuiguang"><span class="text_50">最新技术推广</span></router-link>
       </div>
       <div class="section_4 flex-col">
         <router-link class="text-wrapper_5 flex-col" to="/computer/lianxiwomen"><span class="text_7">联系我们</span></router-link>

@@ -42,9 +42,11 @@
              </div>
               <div class="wenzijieshao">{{ item.wenzijieshao }}</div>
             </div>
+             <el-button plain @click="showExpertDetails(item)" class="chakanxiangxi flex-col"><span class="ckxx">查看详细&nbsp;→</span></el-button>
           </div>
         </div>
       </el-col>
+      
     </el-row>
   </div>
 
@@ -61,7 +63,61 @@
       <div class="bottomblank">
       <BottomBlank />
     </div>
+
+    <el-dialog
+      title="专家详情"
+      :visible.sync="dialogVisible"
+      width="22.36rem"
+      class="expert-dialog"
+    >
+
+   <div v-if="selectedExpert">
+    <div class="dialog-header flex-row">
+      <img
+        :src="selectedExpert.headphotoSrc"
+        class="dialog-headphoto"
+        referrerpolicy="no-referrer"
+      />
+      <div class="dialog-title-wrapper flex-col">
+      <div class="dialog-title-info flex-row">
+        <span class="dialog-name">{{ selectedExpert.zhuanjianame }}</span>
+        <span class="dialog-title">{{ selectedExpert.zhuanjiatouxian }}</span>
+        </div>
+        <div class="dialog-tags">
+          <span
+            v-for="tag in selectedExpert.zhuanjiatags"
+           :key="tag"
+            class="dialog-tag-item"
+           >{{ tag }}</span>
+         </div>
+      </div>
+    </div>
+
+    <div class="gerenjianjie">个人简介</div>
+
+    <p class="dialog-intro">{{ selectedExpert.wenzijieshao }}</p>
+
+        <div class="yanjiuchengguotitle">研究成果</div>
+        <ul class="yanjiuchengguowrapper">
+
+      <li
+            v-for="neirong1 in selectedExpert.yanjiuchengguo"
+           :key="neirong1"
+            class="yanjiuchengguo"
+           >&bull;&nbsp;&nbsp;{{ neirong1 }}</li>
+    </ul>
   </div>
+
+
+
+
+ 
+     
+    </el-dialog>
+
+  </div>
+
+   
 </template>
 
 <script>
@@ -78,83 +134,142 @@ export default {
 
   data() {
     return {
+
+      dialogVisible: false,
+      selectedExpert: null,
+
       zhuanjiaList: [
         {
           headphotoSrc: require('@/views/computer/lanhu_zhuanjiaku/assets/img/testphoto.png'),
           zhuanjianame:'张三',
           zhuanjiatouxian:'教授',
           zhuanjiatags:['人工智能','机器学习','深度学习'],
-          wenzijieshao:'国家特聘专家，在人工智能领域有二十余年研究经验。主持多项国家重点研发计划项目，发表高水平论文100余篇，获得国家科技进步奖一等奖。'
+          wenzijieshao:'国家特聘专家，在人工智能领域有二十余年研究经验。主持多项国家重点研发计划项目，发表高水平论文100余篇，获得国家科技进步奖一等奖。',
+             yanjiuchengguo: [
+          '发表 SCI 论文 50 余篇',
+          '获得国家科技进步一等奖',
+          '主持“国家重点研发计划”项目'
+        ]
         },
         {
-          headphotoSrc: require('@/views/computer/lanhu_zhuanjiaku/assets/img/testphoto.png'),
+          headphotoSrc: require('@/views/computer/lanhu_zhuanjiaku/assets/img/testphoto2.png'),
           zhuanjianame:'李四',
           zhuanjiatouxian:'教授',
           zhuanjiatags:['人工智能','机器学习'],
-          wenzijieshao:'国家特聘专家，在人工智能领域有二十余年研究经验。主持多项国家重点研发计划项目，发表高水平论文100余篇，获得国家科技进步奖一等奖。国家特聘专家，在人工智能领域有二十余年研究经验。主持多项国家重点研发计划项目，发表高水平论文100余篇，获得国家科技进步奖一等奖。'
+          wenzijieshao:'国家特聘专家，在人工智能领域有二十余年研究经验。主持多项国家重点研发计划项目，发表高水平论文100余篇，获得国家科技进步奖一等奖。国家特聘专家，在人工智能领域有二十余年研究经验。主持多项国家重点研发计划项目，发表高水平论文100余篇，获得国家科技进步奖一等奖。',
+             yanjiuchengguo: [
+          '发表 SCI 论文 11111 余篇',
+          '获得国家科技进步一等奖',
+          '主持“国家重点研发计划”项目'
+        ]
         },
         {
-          headphotoSrc: require('@/views/computer/lanhu_zhuanjiaku/assets/img/testphoto.png'),
+          headphotoSrc: require('@/views/computer/lanhu_zhuanjiaku/assets/img/testphoto3.png'),
           zhuanjianame:'王五',
           zhuanjiatouxian:'教授',
           zhuanjiatags:['人工智能','机器学习'],
-          wenzijieshao:'国家特聘专家，在人工智能领域有二十余年研究经验。主持多项国家重点研发计划项目，发表高水平论文100余篇，获得国家科技进步奖一等奖。'
+          wenzijieshao:'国家特聘专家，在人工智能领域有二十余年研究经验。主持多项国家重点研发计划项目，发表高水平论文100余篇，获得国家科技进步奖一等奖。',
+             yanjiuchengguo: [
+          '发表 SCI 论文 344432423 余篇',
+          '获得国家科技进步一等奖',
+          '主持“国家重点研发计划”项目'
+        ]
+        },
+        {
+          headphotoSrc: require('@/views/computer/lanhu_zhuanjiaku/assets/img/testphoto4.png'),
+          zhuanjianame:'赵六',
+          zhuanjiatouxian:'教授',
+          zhuanjiatags:['人工智能','机器学习','深度学习','国家教授'],
+          wenzijieshao:'国家特聘专家，在人工智能领域有二十余年研究经验。主持多项国家重点研发计划项目，发表高水平论文100余篇，获得国家科技进步奖一等奖。',
+             yanjiuchengguo: [
+          '发表 SCI 论文 555555 余篇',
+          '获得国家科技进步一等奖',
+          '主持“国家重点研发计划”项目'
+        ]
         },
         {
           headphotoSrc: require('@/views/computer/lanhu_zhuanjiaku/assets/img/testphoto.png'),
           zhuanjianame:'赵六',
           zhuanjiatouxian:'教授',
           zhuanjiatags:['人工智能','机器学习','深度学习','国家教授'],
-          wenzijieshao:'国家特聘专家，在人工智能领域有二十余年研究经验。主持多项国家重点研发计划项目，发表高水平论文100余篇，获得国家科技进步奖一等奖。'
+          wenzijieshao:'国家特聘专家，在人工智能领域有二十余年研究经验。主持多项国家重点研发计划项目，发表高水平论文100余篇，获得国家科技进步奖一等奖。',
+             yanjiuchengguo: [
+          '发表 SCI 论文 67546 余篇',
+          '获得国家科技进步一等奖',
+          '主持“国家重点研发计划”项目'
+        ]
         },
         {
-          headphotoSrc: require('@/views/computer/lanhu_zhuanjiaku/assets/img/testphoto.png'),
-          zhuanjianame:'赵六',
-          zhuanjiatouxian:'教授',
-          zhuanjiatags:['人工智能','机器学习','深度学习','国家教授'],
-          wenzijieshao:'国家特聘专家，在人工智能领域有二十余年研究经验。主持多项国家重点研发计划项目，发表高水平论文100余篇，获得国家科技进步奖一等奖。'
-        },
-        {
-          headphotoSrc: require('@/views/computer/lanhu_zhuanjiaku/assets/img/testphoto.png'),
+          headphotoSrc: require('@/views/computer/lanhu_zhuanjiaku/assets/img/testphoto2.png'),
           zhuanjianame:'王五',
           zhuanjiatouxian:'教授',
           zhuanjiatags:['深度学习','国家教授'],
-          wenzijieshao:'国家特聘专家，在人工智能领域有二十余年研究经验。主持多项国家重点研发计划项目，发表高水平论文100余篇，获得国家科技进步奖一等奖。'
+          wenzijieshao:'国家特聘专家，在人工智能领域有二十余年研究经验。主持多项国家重点研发计划项目，发表高水平论文100余篇，获得国家科技进步奖一等奖。',
+             yanjiuchengguo: [
+          '发表 SCI 论文 243234324 余篇',
+          '获得国家科技进步一等奖',
+          '主持“国家重点研发计划”项目'
+        ]
         },
         {
-          headphotoSrc: require('@/views/computer/lanhu_zhuanjiaku/assets/img/testphoto.png'),
+          headphotoSrc: require('@/views/computer/lanhu_zhuanjiaku/assets/img/testphoto3.png'),
           zhuanjianame:'李四',
           zhuanjiatouxian:'教授',
           zhuanjiatags:['人工智能','机器学习','深度学习','国家教授'],
-          wenzijieshao:'国家特聘专家，在人工智能领域有二十余年研究经验。主持多项国家重点研发计划项目，发表高水平论文100余篇，获得国家科技进步奖一等奖。'
+          wenzijieshao:'国家特聘专家，在人工智能领域有二十余年研究经验。主持多项国家重点研发计划项目，发表高水平论文100余篇，获得国家科技进步奖一等奖。',
+             yanjiuchengguo: [
+          '发表 SCI 论文 2340 余篇',
+          '获得国家科技进步一等奖',
+          '主持“国家重点研发计划”项目'
+        ]
         },
         {
-          headphotoSrc: require('@/views/computer/lanhu_zhuanjiaku/assets/img/testphoto.png'),
+          headphotoSrc: require('@/views/computer/lanhu_zhuanjiaku/assets/img/testphoto4.png'),
           zhuanjianame:'张三',
           zhuanjiatouxian:'教授',
           zhuanjiatags:['人工智能','机器学习','深度学习','国家教授'],
-          wenzijieshao:'国家特聘专家，在人工智能领域有二十余年研究经验。主持多项国家重点研发计划项目，发表高水平论文100余篇，获得国家科技进步奖一等奖。'
+          wenzijieshao:'国家特聘专家，在人工智能领域有二十余年研究经验。主持多项国家重点研发计划项目，发表高水平论文100余篇，获得国家科技进步奖一等奖。',
+             yanjiuchengguo: [
+          '发表 SCI 论文 55540 余篇',
+          '获得国家科技进步一等奖',
+          '主持“国家重点研发计划”项目'
+        ]
         },
         {
-          headphotoSrc: require('@/views/computer/lanhu_zhuanjiaku/assets/img/testphoto.png'),
+          headphotoSrc: require('@/views/computer/lanhu_zhuanjiaku/assets/img/testphoto3.png'),
           zhuanjianame:'张三',
           zhuanjiatouxian:'教授',
           zhuanjiatags:['人工智能','机器学习','深度学习','国家教授'],
-          wenzijieshao:'国家特聘专家，在人工智能领域有二十余年研究经验。主持多项国家重点研发计划项目，发表高水平论文100余篇，获得国家科技进步奖一等奖。'
+          wenzijieshao:'国家特聘专家，在人工智能领域有二十余年研究经验。主持多项国家重点研发计划项目，发表高水平论文100余篇，获得国家科技进步奖一等奖。',
+             yanjiuchengguo: [
+          '发表 SCI 论文 78678 余篇',
+          '获得国家科技进步一等奖',
+          '主持“国家重点研发计划”项目'
+        ]
         },
         {
-          headphotoSrc: require('@/views/computer/lanhu_zhuanjiaku/assets/img/testphoto.png'),
+          headphotoSrc: require('@/views/computer/lanhu_zhuanjiaku/assets/img/testphoto2.png'),
           zhuanjianame:'赵六',
           zhuanjiatouxian:'教授',
           zhuanjiatags:['人工智能','机器学习','深度学习','国家教授'],
-          wenzijieshao:'国家特聘专家，在人工智能领域有二十余年研究经验。主持多项国家重点研发计划项目，发表高水平论文100余篇，获得国家科技进步奖一等奖。'
+          wenzijieshao:'国家特聘专家，在人工智能领域有二十余年研究经验。主持多项国家重点研发计划项目，发表高水平论文100余篇，获得国家科技进步奖一等奖。',
+             yanjiuchengguo: [
+          '发表 SCI 论文 9876 余篇',
+          '获得国家科技进步一等奖',
+          '主持“国家重点研发计划”项目'
+        ]
         },
       ],
       constants: {}
     };
   },
 
-  methods: {}
+  methods: {
+    showExpertDetails(expert) {
+      this.selectedExpert = expert;
+      this.dialogVisible = true;
+    },
+  }
 };
 
 

@@ -224,6 +224,14 @@ export default {
   width: 3.04rem;
 }
 
+.text-wrapper_15:hover {
+  background-color: rgba(255, 255, 255, 1);
+}
+
+.text-wrapper_15:hover .text_40 {
+    color: rgba(56, 70, 114, 1);
+}
+
 .text_40 {
   width: 1.974rem;
   height: 0.534rem;
