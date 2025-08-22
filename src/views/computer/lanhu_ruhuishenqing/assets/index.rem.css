@@ -6,8 +6,8 @@ html {
   background-color: rgba(255, 255, 255, 1);
   position: relative;
   width: 51.2rem;
-  height: 40.667rem;
-  overflow: hidden;
+  height: auto;
+
 }
 
 .box_1 {
@@ -347,8 +347,19 @@ html {
   margin-top: 1.466rem;
 }
 
-.column_1 {
+.column_1
+ {
   width:13.68rem;
+}
+
+.column_2{
+  width:13.68rem;
+  margin-left: 0.8rem;
+}
+
+.column_3{
+  width:13.68rem;
+  margin-left: 0.8rem;
 }
 
 .list_1 {
@@ -765,7 +776,87 @@ html {
   margin: 1.067rem 0 0 20.454rem;
 }
 
+.avatar-uploader-icon {
+  font-size:5.036rem;
+}
+
+.box_9 {
+  margin-left:4.266rem;
+  margin-top:0.826rem;
+  width: 42.64rem;
+}
+
+.jianyaoqingkuangtitle {
+  margin-top:0.826rem;
+  margin-bottom: 0.266rem;
+  font-family: Source Han Serif CN;
+font-size: 0.473rem;
+font-weight: normal;
+line-height: 0.64rem;
+display: flex;
+align-items: center;
+letter-spacing: 0rem;
+
+font-variation-settings: "opsz" auto;
+font-feature-settings: "kern" on;
+/* 主题色 */
+color: #384672;
+}
+
+.gongzuojianli {
+  margin-bottom: 0.266rem;
+  font-family: Source Han Serif CN;
+font-size: 0.473rem;
+font-weight: normal;
+line-height: 0.64rem;
+display: flex;
+align-items: center;
+letter-spacing: 0rem;
+
+font-variation-settings: "opsz" auto;
+font-feature-settings: "kern" on;
+/* 主题色 */
+color: #384672;
+}
+
+.zhuyishixiang {
+  margin-top:0.826rem;
+  font-family: Source Han Serif CN;
+font-size: 0.446rem;
+font-weight: normal;
+line-height: 0.64rem;
+display: flex;
+align-items: center;
+letter-spacing: 0rem;
+font-variation-settings: "opsz" auto;
+font-feature-settings: "kern" on;
+color: #FA3434;
+}
+
+.submit-btn {
+  margin-top: 0.8rem;
+  width: 3.76rem;
+  height: 1.066rem;
+  display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+padding: 10px 20px;
+gap: 10px;
+background: #384672;
+}
+
+.submit-btn:hover {
+  background: white;
+  color:#384672;
+}
+
+.shengrikuang {
+  width:13.68rem !important;
+}
+
 .bottomblank {
+  margin-top:1.866rem;
   width: 51.2rem;
   height: 8.4rem;
   padding-bottom:0rem;

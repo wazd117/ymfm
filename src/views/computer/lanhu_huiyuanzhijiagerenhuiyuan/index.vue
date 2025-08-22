@@ -4,43 +4,6 @@
       <div class="titlebutton">
         <TitleButton />
       </div>
-     <!-- <div class="image-contianer_1">
-      <img
-        class="image_1"
-        referrerpolicy="no-referrer"
-        src="./assets/img/MasterDDSSlicePNG9e4f0afb7009ff9f61fbd480c98d69ef.png"
-      />
-
-      <img
-        class="image_20"
-        referrerpolicy="no-referrer"
-        src="./assets/img/MasterDDSSlicePNGdca3da43733296a7c96e5d88d14cf365.png"
-      />
-     </div>
-      <div class="box_2 flex-col">
-        <a class="text-wrapper_1 flex-col" :href="'/computer/shouye'" target="_blank"><span class="text_1">首页</span></a>
-      </div>
-      <div class="box_3 flex-col">
-        <span class="text_2">Yunnan&nbsp;Province&nbsp;Association&nbsp;of&nbsp;Inventors</span>
-        <span class="text_3">云南省发明协会</span>
-        <div class="group_1 flex-row justify-between">
-          <div class="group_2 flex-col">
-            <a class="text-wrapper_2 flex-col" :href="'/computer/xiehuigaikuangxiehuijianjie'" target="_blank"><span class="text_4">协会概况</span></a>
-          </div>
-          <div class="group_3 flex-col">
-            <a class="text-wrapper_3 flex-col" :href="'/computer/xiehuidongtaitongzhigonggao'" target="_blank"><span class="text_5">协会动态</span></a>
-          </div>
-          <div class="group_4 flex-col">
-            <a class="text-wrapper_4 flex-col" :href="'/computer/jiangxiangzhuanqufamingchuangyejiang'" target="_blank"><span class="text_6">奖项专区</span></a>
-          </div>
-          <div class="group_5 flex-col">
-            <a class="text-wrapper_5 flex-col" href="/computer/lianxiwomen" target="_blank"><span class="text_7">联系我们</span></a>
-          </div>
-        </div>
-      </div>
-      <div class="box_4 flex-col">
-        <div class="text-wrapper_6 flex-col"><span class="text_8">会员之家</span></div>
-      </div> -->
       
     </div>
     <div class="box_5 flex-col">
@@ -51,7 +14,7 @@
           创新者的港湾
         </span>
         <div class="text-wrapper_7 flex-row">
-          <span class="text_9">入会申请</span>
+          <router-link class="text_9" to="/computer/ruhuishenqing">入会申请</router-link>
           <router-link class="text_10" to="huiyuanzhijiadanweihuiyuan">单位会员</router-link>
           <span class="text_11">个人会员</span>
         </div>

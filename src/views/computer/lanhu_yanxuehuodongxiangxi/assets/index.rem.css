@@ -99,29 +99,27 @@ font-feature-settings: "kern" on;
 }
 
 .box_2 {
-position: absolute;
-left: 4.28rem;
-top: 16.8rem;
+align-items: flex-start;
+
+  margin-top: 1.6rem;    /* 你可以根据需要调整这个值 */
+  margin-left: 4.28rem; 
 width: 42.653rem;
-height: 2.586rem;
+  flex-direction: row;
 opacity: 1;
 
 /* 自动布局 */
 display: flex;
-flex-direction: column;
-align-items: center;
 padding: 0px;
 gap: 0.533rem;
 }
 
-.huodongjinajiebox {
-  position: absolute;
+
+.huodongjianjiebox {
+  /* position: absolute; */
   width:32.8rem;
   height: auto;
   background-color: white;
-  margin-left:4.266rem;
-  margin-top:1.066rem;
-  
+   margin-bottom: 0.533rem;
 }
 
 .huodongjianjietitle {
@@ -155,9 +153,10 @@ z-index: 1;
 }
 
 .xingchenganpaibox {
-  position:absolute;
-  top:10.28rem;
-  left:4.266rem;
+  /* position:absolute;
+  top:9.28rem;
+  left:4.266rem; */
+  padding-top :0.533rem; 
   width:32.8rem;
   height: auto;
   background-color: white;
@@ -340,18 +339,213 @@ z-index: 1;}
 }
 
 .feiyongshuomingbox {
-  position:absolute;
-  top:30.506rem;
-  left:4.266rem;
+  margin-bottom:0.014rem;
+  margin-left:0rem;
+  margin-top: 0.533rem;
   width:32.8rem;
   height: auto;
-  background-color: white;
+  background-color: white !important;
   border-radius: 8px;
   opacity: 1;
+}
+
+.zhuyishixiangbox {
+  margin-bottom:0.014rem;
+  margin-left:0rem;
+  margin-top: 0.533rem;
+  width:32.8rem;
+  height: auto;
+  background-color: white !important;
+  border-radius: 8px;
+  opacity: 1;
+}
+
+
+.feiyongshuomingtitle {
+  padding-left: 0.533rem;
+  padding-top: 0.533rem;
+
+  font-family: Source Han Serif CN;
+font-size: 18px;
+font-weight: bold;
+line-height: 28px;
+letter-spacing: 0px;
+
+font-variation-settings: "opsz" auto;
+font-feature-settings: "kern" on;
+color: #3D3D3D;
+}
+
+.feiyongshuoming {
+  font-family: Source Han Serif CN;
+font-size: 14px;
+font-weight: normal;
+line-height: normal;
+letter-spacing: 0px;
+
+font-variation-settings: "opsz" auto;
+font-feature-settings: "kern" on;
+/* 666 */
+color: #666666;
+}
+
+.feiyongshuomingwrapper {
+  padding-left: 0.533rem;
+  padding-top:0.813rem;
+}
+.zhuyishixiangwrapper {
+  padding-left: 0.733rem;
+  padding-top:0.813rem;
+}
+
+
+.baomingchuangkou {
+  width:8.773rem;
+  height:5.653rem;
+  background-color: white;
+}
+
+.price {
+  padding-left: 0.64rem;
+  padding-top:0.64rem;
+  font-family: Source Han Serif CN;
+  font-size: 24px;
+  font-weight: bold;
+  line-height: 32px;
+  letter-spacing: 0px;
+
+  font-variation-settings: "opsz" auto;
+  font-feature-settings: "kern" on;
+  color: #DC2626;
+ }
+
+ .baomingshijianwrapper {
+    padding-left: 0.64rem;
+    padding-top: 0.533rem;
+ }
+
+ .baomingshijianicon {
+  width: 0.426rem;
+  height: 0.426rem;
+ }
+
+ .yibaomingicon {
+  width: 0.426rem;
+  height: 0.426rem;
+ }
+
+ .baomingshijian {
+  font-family: Source Han Serif CN;
+font-size: 0.373rem;
+font-weight: normal;
+line-height: 125%;
+letter-spacing: 0em;
+
+font-variation-settings: "opsz" auto;
+font-feature-settings: "kern" on;
+/* 666 */
+color: #666666;
+ }
+
+.yibaomingrenshu {
+  font-family: Source Han Serif CN;
+font-size: 0.373rem;
+font-weight: normal;
+line-height: 125%;
+letter-spacing: 0em;
+
+font-variation-settings: "opsz" auto;
+font-feature-settings: "kern" on;
+/* 666 */
+color: #666666;
+ } 
+
+ .yibaomingrenshuwrapper {
+  padding-left: 0.64rem;
+    padding-top: 0.426rem;
+ }
+
+ .likebaoming {
+  display: flex;
+    width: 7.493rem;
+    height: 0.906rem;
+    background: #384672;
+    font-family: Source Han Serif CN;
+      justify-content: center;
+      align-items: center; 
+font-size: 0.373rem;
+font-weight: 500;
+line-height: 0.373rem;
+text-align: center;
+letter-spacing: 0px;
+margin-top:0.533rem;
+margin-left:0.64rem;
+font-variation-settings: "opsz" auto;
+font-feature-settings: "kern" on;
+/* fff */
+color: #FFFFFF;
+ }
+
+  .likebaoming:hover {
+    background:#FFFFFF;
+    color:#384672;
+  }
+
+.box_right {
+  position: sticky;     
+  top: 10.82rem; 
+  padding-top: 0rem;
+  padding-left: 1.093rem;
+}
+
+.total-price {
+  font-family: Source Han Serif CN;
+font-size: 24px;
+font-weight: bold;
+line-height: normal;
+letter-spacing: 0em;
+
+font-variation-settings: "opsz" auto;
+font-feature-settings: "kern" on;
+color: #E62323;
+}
+
+.fixed-footer-buttons {
+  margin-left: 17.226rem;
+}
+
+.quxiao {
+  width: 1.813rem;
+  height: 1.066rem;
+  font-family: Source Han Serif CN;
+font-size: 0.373rem;
+font-weight: normal;
+line-height: normal;
+letter-spacing: 0em;
+
+font-feature-settings: "kern" on;
+/* 666 */
+color: #666666;
+}
+
+.tijiaobaoming {
+  width:2.56rem;
+  height: 1.066rem;
+  font-family: Source Han Serif CN;
+font-size: 0.373rem;
+font-weight: normal;
+line-height: normal;
+letter-spacing: 0em;
+
+font-feature-settings: "kern" on;
+/* fff */
+color: #FFFFFF;
+background: #384672;
 }
 
 .bottomblank {
   width: 51.2rem;
   height: 8.4rem;
   padding-bottom:0rem;
+  padding-top: 1.6rem;
 }

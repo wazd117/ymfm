@@ -4,43 +4,6 @@
       <div class="titlebutton">
         <TitleButton />
       </div>
-      <!-- <div class="image-contianer_1">
-      <img
-        class="image_1"
-        referrerpolicy="no-referrer"
-        src="./assets/img/MasterDDSSlicePNG9e4f0afb7009ff9f61fbd480c98d69ef.png"
-      />
-
-      <img
-        class="image_20"
-        referrerpolicy="no-referrer"
-        src="./assets/img/MasterDDSSlicePNGdca3da43733296a7c96e5d88d14cf365.png"
-      />
-      </div>
-      <div class="block_1 flex-col">
-        <a class="text-wrapper_1 flex-col" :href="'/computer/shouye'" target="_blank"><span class="text_1">首页</span></a>
-      </div>
-      <div class="block_2 flex-col">
-        <span class="text_2">Yunnan&nbsp;Province&nbsp;Association&nbsp;of&nbsp;Inventors</span>
-        <span class="text_3">云南省发明协会</span>
-        <div class="group_1 flex-row justify-between">
-          <div class="section_2 flex-col">
-            <a class="text-wrapper_2 flex-col" :href="'/computer/xiehuigaikuangxiehuijianjie'" target="_blank"><span class="text_4">协会概况</span></a>
-          </div>
-          <div class="section_3 flex-col">
-            <a class="text-wrapper_3 flex-col" :href="'/computer/xiehuidongtaitongzhigonggao'" target="_blank"><span class="text_5">协会动态</span></a>
-          </div>
-          <div class="section_4 flex-col">
-            <a class="text-wrapper_4 flex-col" :href="'/computer/jiangxiangzhuanqufamingchuangyejiang'" target="_blank"><span class="text_6">奖项专区</span></a>
-          </div>
-          <div class="section_5 flex-col">
-            <a class="text-wrapper_5 flex-col" href="/computer/lianxiwomen" target="_blank"><span class="text_7">联系我们</span></a>
-          </div>
-        </div>
-      </div>
-      <div class="block_3 flex-col">
-        <a class="text-wrapper_6 flex-col" :href="'/computer/huiyuanzhijiadanweihuiyuan'" target="_blank"><span class="text_8">会员之家</span></a>
-      </div> -->
     </div>
     <div class="section_6 flex-col">
       <div class="group_2 flex-col justify-end">
@@ -50,7 +13,7 @@
           创新者的港湾
         </span>
         <div class="text-wrapper_7 flex-row">
-          <span class="text_9">入会申请</span>
+          <router-link class="text_9" to="/computer/ruhuishenqing">入会申请</router-link>
           <span class="text_10">单位会员</span>
           <router-link class="text_11" to="huiyuanzhijiagerenhuiyuan">个人会员</router-link>
         </div>
@@ -93,7 +56,7 @@
         </div>
         <div class="block_5 flex-col"></div>
       </div>
-      <div class="group_4 flex-row justify-between">
+      <!-- <div class="group_4 flex-row justify-between">
         <img
           class="image_3"
           referrerpolicy="no-referrer"
@@ -138,69 +101,17 @@
           referrerpolicy="no-referrer"
           src="./assets/img/MasterDDSSlicePNG1dc240808aa0077790e731d3fa0766a1.png"
         />
-      </div>
-      <img
+      </div> -->
+      <!-- <img
         class="image_11"
         referrerpolicy="no-referrer"
         src="./assets/img/MasterDDSSlicePNGd30c9339d9636bfe99f7f963d8289a54.png"
-      />
-      <!-- <div class="group_5 flex-row justify-between">
-        <div class="group_6 flex-col">
-          <span class="text_14">友情链接</span>
-        <a class="image-wrapper">
-          <a class="zhongguofamingixiehuilink" :href="'https://www.cainet.org.cn/'" target="_blank">
-            <img
-            class="image_12"
-            referrerpolicy="no-referrer"
-            src="./assets/img/fmxh.png"
-            />
-          </a>
+      /> -->
 
-          <a class="ynuzhishichanqunalink" :href="'http://www.ip.ynu.edu.cn/'" target="_blank">
-            <img
-            class="image_13"
-            referrerpolicy="no-referrer"
-            src="./assets/img/swyy.png"
-            />
-          </a>
+      <el-carousel-item v-for="(imgSrc, index) in qiyeicon" :key="index">
+           <img class="carousel-image" :src="require(imgSrc)">
+       </el-carousel-item>
 
-          <a class="shengwuyiyaolink" :href="'http://bmh.iflora.cn/'" target="_blank">
-            <img
-            class="image_14"
-            referrerpolicy="no-referrer"
-            src="./assets/img/ydzscq.png"
-            />
-         </a>
-        </a>
-        </div>
-        <div class="group_7 flex-col">
-          <div class="block_6 flex-row">
-            <div class="text-group_1 flex-col justify-between">
-              <span class="text_15">云南省发明协会</span>
-              <span class="text_16">地址：云南省昆明市五华区学府路海伦先生&nbsp;1&nbsp;栋&nbsp;11&nbsp;楼</span>
-            </div>
-          </div>
-          <div class="block_7 flex-row justify-between">
-            <div class="text-group_2 flex-col justify-between">
-              <span class="text_17">联系方式</span>
-              <span class="paragraph_3">
-                副秘书长—刘志强：15368258967
-                <br />
-                副秘书长—张毓洀：18669000423
-                <br />
-                电话总机：0871-68588876
-                <br />
-                邮编：655000
-              </span>
-            </div>
-            <a class="text-wrapper_9 flex-col" :href="'/computer/lianxiwomen'" target="_blank"><span class="text_18">联系我们&nbsp;→</span></a>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="text-wrapper_10 flex-col">
-      <span class="text_19">版权所有：Copyright&nbsp;©&nbsp;云南省发明协会&nbsp;All&nbsp;rights&nbsp;reserved.</span>
-    </div> -->
        <div class="bottomblank">
       <BottomBlank />
     </div>
@@ -218,6 +129,17 @@ export default {
   },
   data() {
     return {
+      qiyeicon:[
+        '@/views/computer/lanhu_huiyuanzhijiadanweihuiyuan/assets/img/MasterDDSSlicePNG31f5abb001cb61cf1804a7e66dd993d5.png',
+        '@/views/computer/lanhu_huiyuanzhijiadanweihuiyuan/assets/img/MasterDDSSlicePNG54143c1411f2f9e798846dfce5157d13.png',
+        '@/views/computer/lanhu_huiyuanzhijiadanweihuiyuan/assets/img/MasterDDSSlicePNG13f1aeb194cf075df451d79147532324.png',
+        '@/views/computer/lanhu_huiyuanzhijiadanweihuiyuan/assets/img/MasterDDSSlicePNGd76268a9ebc608ceb1f1fe64bff63be5.png',
+        '@/views/computer/lanhu_huiyuanzhijiadanweihuiyuan/assets/img/MasterDDSSlicePNG58a2f79100d60bef1772d88f63c5f12a.png',
+        '@/views/computer/lanhu_huiyuanzhijiadanweihuiyuan/assets/img/MasterDDSSlicePNG8af211c8249b6ffa499b77d26389a1c8.png',
+        '@/views/computer/lanhu_huiyuanzhijiadanweihuiyuan/assets/img/MasterDDSSlicePNG8d62a612d1d1ad6c4c56e68015656534.png',
+        '@/views/computer/lanhu_huiyuanzhijiadanweihuiyuan/assets/img/MasterDDSSlicePNG1dc240808aa0077790e731d3fa0766a1.png',
+      ],
+
       constants: {}
     };
   },
